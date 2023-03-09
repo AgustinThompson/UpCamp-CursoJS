@@ -1,0 +1,179 @@
+<script>
+    console.log("Hello World");
+    // Declaración de variables
+
+var miVariable = 10;   //Declaro la variable miVariable
+
+console.log(miVariable);    //Muestro el valor de la variable miVariable
+
+miVariable = "Hola Mundo";  //Reasigno el valor de la variable miVariable
+
+console.log(miVariable);  
+miVariableAlrevés = miVariable.split("").reverse().join(""); //split divide la cadena en un array, reverse invierte el array y join une el array en una cadena
+
+miVariableDos = miVariable + " al revés es " +  miVariableAlrevés; //Concatenación de cadenas   
+
+console.log(miVariableDos); //Muestro el valor de la variable miVariableDos
+
+console.log("La cantidad de caracteres de mi Variable Dos es: " + miVariableDos.length); //Muestro la longitud de la cadena
+
+console.log(miVariableDos.toUpperCase());   //Muestro la cadena en mayúsculas
+
+var suma = 10 + 15;
+console.log("El resultado de la suma es: " + suma); //Muestro el valor de la variable suma
+
+suma++; //adición de 1 a la variable suma (es lo mismo que suma = suma + 1)
+
+suma += 2; //adición de 2 a la variable suma (es lo mismo que suma = suma + 2)
+
+console.log("El resultado de la suma adicionandole 2 es: " + suma);
+console.log("El resultado de la suma adicionandole 1 es: " + suma);    
+suma--;
+console.log("El resultado de la suma restandole 1 es: " + suma);
+multiplicacion = 10 * suma;
+console.log("El resultado de la multiplicación de 10 x suma es: " + multiplicacion);
+
+//STRINGS
+var miString = "Hola Mundo";
+console.log(miString);
+var miStringDos = 'Hola Mundo';
+var stringConComillas = "Hola 'Mundo'";     
+var stringConComillasDos = 'Hola "Mundo"';
+var stringConComillasTres = 'Hola \'Mundo\''; //Se usa la barra invertida para escapar las comillas
+
+var stringConComillasCuatro = "Hola \"Mundo\""; 
+var stringConComillasCinco = "Hola \"Mundo\" 'Hola Mundo'"; //Se puede usar comillas dobles y simples
+
+console.log(stringConComillasCinco);
+console.log(stringConComillasCuatro);
+console.log(stringConComillasTres);
+console.log(stringConComillasDos);
+console.log(stringConComillas);
+
+//JAVASCRIPT 
+var jS = "JavaScript"; //Declaro la variable jS
+
+console.log([jS.length]); //Muestro la longitud de la cadena
+
+console.log(jS[jS.length - 1]); //Último caracter de la cadena es siempre la longitud -1
+
+//CONCATENANDO VARIABLES 
+var nombre = "Juan";
+var apellido = "Perez";
+var edad = 30;
+var texto = "Mi nombre es " + nombre + " " + apellido + " y tengo " + edad + " años"; //Concatenación de variables nombre, apellido y edad
+console.log(texto);
+
+//CONCATENANDO VARIABLES CON TEMPLATE STRING
+var edad = 45;
+var nombre = "Pichulo";
+var apellido = "Sacamoco";
+var textoDos = `Mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`; //Concatenación de variables nombre, apellido y edad
+console.log(textoDos);
+
+//CONCATENANDO VARIABLES CON TEMPLATE STRING Y FUNCIONES
+var edad = 109;
+var nombre = "Ataulfo";
+var apellido = "Castañas";
+var textoTres = `Mi nombre es ${nombre.toUpperCase()} ${apellido.toUpperCase()} y tengo ${edad} años.`; //Concatenación de variables nombre, apellido y edad y uso de funciones toUpperCase para convertir a mayúsculas la cadena de texto de las variables nombre y apellido 
+console.log(textoTres);
+
+//ARRAYS
+var miArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Declaro el array miArray
+console.log(miArray); //Muestro el array miArray
+console.log(miArray[0]); //Muestro el primer elemento del array miArray
+console.log(miArray[miArray.length - 1]); //Muestro el último elemento del array miArray
+console.log(miArray[miArray.length - 2]); //Muestro el penúltimo elemento del array miArray
+
+//ARRAYS MULTIDIMENSIONALES
+var miArrayMultidimensional = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; //Declaro el array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional); //Muestro el array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[0]); //Muestro el primer elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[0][0]); //Muestro el primer elemento del primer elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[0][1]); //Muestro el segundo elemento del primer elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[0][2]); //Muestro el tercer elemento del primer elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[1][0]); //Muestro el primer elemento del segundo elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[1][1]); //Muestro el segundo elemento del segundo elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[1][2]); //Muestro el tercer elemento del segundo elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[2][0]); //Muestro el primer elemento del tercer elemento del array multidimensional miArrayMultidimensional
+console.log(miArrayMultidimensional[2][1]); //Muestro el segundo elemento del tercer elemento del array multidimensional miArrayMultidimensional
+
+//ARRAYS CON VARIABLES
+var miArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Declaro el array miArray
+var miVariable = 10; //Declaro la variable miVariable
+console.log(miArray[miVariable]); //Muestro el elemento del array miArray que corresponde al valor de la variable miVariable
+
+//POP - elimina el último elemento del array
+var miArrayDeFormas = ["Cuadrado", " Rectángulo", " Triángulo", " Círculo", " Rombo", " Trapecio", " Pentágono"];
+console.log(miArrayDeFormas);
+miArrayDeFormas.pop(); //Elimino el último elemento del array miArrayDeFormas
+console.log(miArrayDeFormas);
+
+//PUSH - agrega un elemento al final del array
+miArrayDeFormas.push(" Hexágono"); //Agrego un elemento al final del array miArrayDeFormas  
+console.log(miArrayDeFormas + " --> Se agregó el elemento  'Hexágono' al final del array");
+
+//SHIFT - elimina el primer elemento del array
+miArrayDeFormas.shift(); //Elimino el primer elemento del array miArrayDeFormas
+console.log(miArrayDeFormas + " --> Se eliminó el primer elemento del array (Cuadrado)");
+
+//UNSHIFT - agrega un elemento al principio del array
+miArrayDeFormas.unshift("Cuadrado"); //Agrego un elemento al principio del array miArrayDeFormas    
+console.log(miArrayDeFormas + " --> Se agregó el elemento  'Cuadrado' al principio del array"); 
+
+//SPLICE - Agregar un elemento al array en determinado lugar
+
+let fruitsAdd = ["apple", "banana", "orange"];
+
+// Agregar "mango" y "kiwi" después del segundo elemento
+fruitsAdd.splice(2, 0, "mango", "kiwi"); //El primer parámetro indica la posición donde se insertará el elemento, el segundo parámetro indica la cantidad de elementos que se eliminarán a partir de la posición indicada en el primer parámetro y los parámetros restantes indican los elementos que se insertarán a partir de la posición indicada en el primer parámetro
+console.log(fruitsAdd); // ["apple", "banana", "mango", "kiwi", "orange"]
+
+
+//SPLICE -  Eliminar un elemento del array en determinado lugar
+
+let fruitsDelete = ["apple", "banana", "orange"];
+// Eliminar el segundo elemento
+fruitsDelete.splice(1, 1);
+console.log(fruitsDelete); // ["apple", "orange"] //El primer parámetro indica la posición donde se insertará el elemento, el segundo parámetro indica la cantidad de elementos que se eliminarán a partir de la posición indicada en el primer parámetro y los parámetros restantes indican los elementos que se insertarán a partir de la posición indicada en el primer parámetro
+
+
+//SPLICE -  Reemplazar un elemento del array en determinado lugar
+
+var miArrayMultidimensionalDos = [["Azul", 4], ["Rojo", 7], ["Verde", 18], ["Negro", 10]];
+console.log(miArrayMultidimensionalDos);
+var titulo = "Stock de Pinturas: \n\n"; //Declaro la variable titulo y le asigno el valor "Stock de Pinturas: \n\n"
+console.log(titulo.toLocaleUpperCase() + "\t" + miArrayMultidimensionalDos[0][0] + ": " + "\t" + miArrayMultidimensionalDos[0][1] + " unidades \n "  + "\t" + miArrayMultidimensionalDos[1][0] + ": " + miArrayMultidimensionalDos[1][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[2][0] + ": " + miArrayMultidimensionalDos[2][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[3][0] + ": " + miArrayMultidimensionalDos[3][1] + " unidades \n"); //Muestro el valor de la variable titulo y el contenido del array miArrayMultidimensionalDos en forma de tabla con saltos de línea (\n) y tabulaciones (\t) para que se vea ordenado 
+/*
+
+STOCK DE PINTURAS: 
+
+	Azul: 	4 unidades 
+ 	Rojo: 7 unidades 
+ 	Verde: 18 unidades 
+ 	Negro: 10 unidades 
+
+*/
+
+//FUNCIONES
+
+var mensajeDeMiFuncion = "Este es el mensaje que muestra la función 'miFuncion'"; //Declaro la variable mensajeDeMiFuncion y le asigno el valor "Este es el mensaje que muestra la función 'miFuncion'". Este mensaje se mostrará en consola cuando se ejecute la función miFuncion y podemos cambiarlo para que muestre cualquier otro mensaje.
+function miFuncion() { //Declaro la función miFuncion. A partir de la llave de apertura de la función se ejecuta el código que se encuentra dentro de la función
+
+    console.log(mensajeDeMiFuncion); //Muestro en consola el texto "Hola Mundo"
+} // Cierre de la función miFuncion
+miFuncion(); //Ejecuto la función miFuncion
+var mensajeDeMiFuncion = "Este es el nuevo mensaje de la función 'miFuncion' :)"; //Declaro la variable mensajeDeMiFuncion y le asigno el valor "Este es el nuevo mensaje de la función 'miFuncion'". Este mensaje se mostrará en consola cuando se ejecute la función miFuncion y podemos cambiarlo para que muestre cualquier otro mensaje.
+
+miFuncion(); //Ejecuto la función miFuncion y se mostrará el nuevo mensaje que le asignamos a la variable mensajeDeMiFuncion
+
+
+
+
+
+
+
+
+
+</script>
+
