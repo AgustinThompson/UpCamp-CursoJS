@@ -157,6 +157,7 @@ STOCK DE PINTURAS:
 
 //FUNCIONES
 
+//Función para mostrar un mensaje en consola
 var mensajeDeMiFuncion = "Este es el mensaje que muestra la función 'miFuncion'"; //Declaro la variable mensajeDeMiFuncion y le asigno el valor "Este es el mensaje que muestra la función 'miFuncion'". Este mensaje se mostrará en consola cuando se ejecute la función miFuncion y podemos cambiarlo para que muestre cualquier otro mensaje.
 function miFuncion() { //Declaro la función miFuncion. A partir de la llave de apertura de la función se ejecuta el código que se encuentra dentro de la función
 
@@ -168,9 +169,15 @@ var mensajeDeMiFuncion = "Este es el nuevo mensaje de la función 'miFuncion' :)
 miFuncion(); //Ejecuto la función miFuncion y se mostrará el nuevo mensaje que le asignamos a la variable mensajeDeMiFuncion
 
 
+//Función que suma utilizando parámetros
+function sumar(num1, num2){
+	suma = num1 + num2;
+	console.log("El resultado de: " + num1 + " + " + num2 + " = " + suma); // Muestro en consola el resultado de la suma de los números que le pasamos como parámetros a la función sumar
 
+}
 
-
+sumar(5, 10); //Ejecuto la función sumar y le paso como parámetros los números 5 y 10
+// El resultado de: 5 + 10 = 15
 
 
 
