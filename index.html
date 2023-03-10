@@ -1,6 +1,6 @@
 <script>
-    console.log("Hello World");
-    // Declaración de variables
+
+console.log("Hello World");// Declaración de variables
 
 var miVariable = 10;   //Declaro la variable miVariable
 
@@ -194,7 +194,7 @@ concatenarStrings("Me", "llamo","Agustin"); //Ejecuto la función concatenarStri
 function multiplicar(mult1, mult2){
 	multiplicacion = mult1 * mult2; //Multiplico los números que le pasamos como parámetros a la función multiplicar y lo asigno a la variable multiplicacion
 	return multiplicacion; //Retorno el valor de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
-
+}
 //Otra forma de retornar el valor es 'return mult1 * mult2;` y no es necesario declarar la variable multiplicacion
 function multiplicar(mult1, mult2){
 	return mult1 * mult2; //Retorno el valor de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
@@ -203,8 +203,13 @@ var resultado = multiplicar(5, 10); //Ejecuto la función multiplicar y le paso 
 
 console.log (multiplicar(5, 10)); //Muestro en consola el resultado de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
 
+//valor resultado de una función es Undefined
+function multiplicacionDos(multi1, multi2){
+	console.log(multi1 * multi2); //Muestro en consola el resultado de la operación de los números que le pasamos como parámetros a la función multiplicar. Pero no se retorna ningún valor
+}
+console.log(multiplicacionDos(8, 8)); //Ejecuto la función multiplicar y le paso como parámetros los números 8 y 8. El valor a mostrar es undefined porque no se retorna ningún valor en la función multiplicar. Si se retorna un valor, el valor a mostrar sería el resultado de la operación de los números que le pasamos como parámetros a la función multiplicar
+
 
 
 
 </script>
-
