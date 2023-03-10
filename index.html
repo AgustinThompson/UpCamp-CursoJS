@@ -173,7 +173,6 @@ miFuncion(); //Ejecuto la función miFuncion y se mostrará el nuevo mensaje que
 function sumar(sum1, sum2){
 	suma = sum1 + sum2;
 	console.log("El resultado de: " + sum1 + " + " + sum2 + " = " + suma); // Muestro en consola el resultado de la suma de los números que le pasamos como parámetros a la función sumar
-
 }
 
 sumar(5, 10); //Ejecuto la función sumar y le paso como parámetros los números 5 y 10
@@ -184,6 +183,26 @@ sumar(900, 1000);
 // El resultado de: 900 + 1000 = 1900
 sumar(19363, 363930);
 // El resultado de: 19363 + 363930 = 383293
+
+//Función que concatena Strings utilizando parámetros y adicionando espacios entre los Strings.
+function concatenarStrings(string1, string2, string3){
+	console.log(string1 + " " + string2 + " " + string3); // Muestro en consola el resultado de la concatenación de los Strings que le pasamos como parámetros a la función concatenarStrings
+}
+concatenarStrings("Me", "llamo","Agustin"); //Ejecuto la función concatenarStrings y le paso como parámetros los Strings "Me", "llamo" y "Agustin"
+
+//Retornar un valor de una función
+function multiplicar(mult1, mult2){
+	multiplicacion = mult1 * mult2; //Multiplico los números que le pasamos como parámetros a la función multiplicar y lo asigno a la variable multiplicacion
+	return multiplicacion; //Retorno el valor de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
+
+//Otra forma de retornar el valor es 'return mult1 * mult2;` y no es necesario declarar la variable multiplicacion
+function multiplicar(mult1, mult2){
+	return mult1 * mult2; //Retorno el valor de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
+}
+var resultado = multiplicar(5, 10); //Ejecuto la función multiplicar y le paso como parámetros los números 5 y 10. El resultado de la multiplicación se lo asigno a la variable resultado
+
+console.log (multiplicar(5, 10)); //Muestro en consola el resultado de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
+
 
 
 
