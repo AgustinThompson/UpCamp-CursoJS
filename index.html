@@ -209,7 +209,30 @@ function multiplicacionDos(multi1, multi2){
 }
 console.log(multiplicacionDos(8, 8)); //Ejecuto la función multiplicar y le paso como parámetros los números 8 y 8. El valor a mostrar es undefined porque no se retorna ningún valor en la función multiplicar. Si se retorna un valor, el valor a mostrar sería el resultado de la operación de los números que le pasamos como parámetros a la función multiplicar
 
+//Función que concatena Strings utilizando parámetros y adicionando espacios entre los Strings.
+function crearCadenaConMeta(lenguajeDeProgramacion) {	//Declaro la función crearCadenaConMeta y le paso como parámetro el String "lenguajeDeProgramacion"
+	return "El lenguaje de programación que estoy aprendiendo es: " + lenguajeDeProgramacion; //Retorno el valor de la concatenación de los Strings que le pasamos como parámetros a la función crearCadenaConMeta
+}
+var lenguajeDeProgramacion = crearCadenaConMeta("JavaScript"); //Ejecuto la función crearCadenaConMeta y le paso como parámetro el String "JavaScript". El resultado de la concatenación se lo asigno a la variable lenguajeDeProgramacion
+console.log(lenguajeDeProgramacion); //Muestro en consola el valor de la variable lenguajeDeProgramacion
 
+//Función que toma un array y un número (elemento) como argumentos. Agrega el número al final del array y elimina el primer elemento del array. Retorna el elemento eliminado.
+function proximoEnLinea(linea, elemento) { //Declaro la función proximoEnLinea y le paso como parámetros el array "linea" y el número "elemento"
+	linea.push(elemento); //Agrego el número que le pasamos como parámetro a la función proximoEnLinea al final del array que le pasamos como parámetro a la función proximoEnLinea
+	return linea.shift(); //Elimino el primer elemento del array que le pasamos como parámetro a la función proximoEnLinea y retorno el elemento eliminado
+}
+var miArray = [1, 2, 3, 4, 5]; //Declaro la variable miArray y le asigno el array [1, 2, 3, 4, 5]
+console.log ("El array antes de ejecutar la función proximoEnLinea es: " + JSON.stringify(miArray)); //Muestro en consola el array que le asignamos a la variable miArray
+console.log(proximoEnLinea(miArray, 6)); //Ejecuto la función proximoEnLinea y le paso como parámetros el array que le asignamos a la variable miArray y el número 6. Muestro en consola el elemento eliminado del array que le asignamos a la variable miArray
+console.log ("El array después de ejecutar la función proximoEnLinea es: " + JSON.stringify(miArray)); //Muestro en consola el array que le asignamos a la variable miArray
+
+//OPERADORES DE COMPARACIÓN
+console.log (9 == 9);  //Operador de igualdad (==) -  Compara dos valores y devuelve true si son iguales (No compara el tipo de dato)
+console.log (9 == "9"); //Operador de igualdad (==) -  Compara dos valores y devuelve true si son iguales (No compara el tipo de dato)
+console.log (8 === 8); //Operador de igualdad estricta (===) - Compara dos valores y devuelve true si son iguales y del mismo tipo de dato
+console.log (8 === "8"); //Operador de igualdad estricta (===) - Compara dos valores y devuelve true si son iguales y del mismo tipo de dato
+console.log (6 != "6");  //Operador de desigualdad (!=) - Compara dos valores y devuelve true si son diferentes (No compara el tipo de dato)
+console.log ( 7 !== "67"); //Operador de desigualdad estricta (!==) - Compara dos valores y devuelve true si son diferentes y de distinto tipo de dato
 
 
 </script>
