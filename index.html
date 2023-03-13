@@ -394,6 +394,111 @@ console.log (seleccionarIdioma ("en")); //Muestro en consola el mensaje "Inglés
 console.log (seleccionarIdioma ("fr")); //Muestro en consola el mensaje "Francés" si la condición es true - se pasó el valor "fr" como parámetro
 console.log (seleccionarIdioma ("pt")); //Muestro en consola el mensaje "No se ha seleccionado ningún idioma" si la condición es false - se pasó el valor "pt" como parámetro
 
+//RETORNANDO VALORES BOOLEANOS
+function esMayorQue (a, b) {
+	return a > b; //Devuelvo true si la condición es true
+}
+console.log (esMayorQue (10, 15)); //   Muestro en consola el valor false si la condición es false - se pasaron los valores 10 y 15 como parámetro -  (FALSE)
+console.log (esMayorQue (4, 2)); //Muestro en consola el valor true si la condición es false - se pasaron los valores 4  y 2 como parámetro   -   (TRUE)
+
+//PATRON DE RETORNO ANTICIPADO
+function miFuncion (){
+	console.log ("Hola");
+	return "Mundo"; //Devuelvo el valor "Mundo"  -  Cuando se ejecuta la sentencia return, la función deja de ejecutarse
+	console.log ("Adios"); //Esta línea no se ejecuta porque la función ya terminó de ejecutarse
+}
+console.log (miFuncion()); //Ejecuto la función miFuncion y muestro en consola el valor "Mundo" - se pasó el valor "Mundo" como parámetro
+
+//EJEMPLO DE PATRON DE RETORNO ANTICIPADO
+function calcularRaizCuadrada(numero){
+	if (numero < 0) { //Si el valor de la variable numero es menor que 0
+		return "El número no puede ser negativo"; //Devuelvo el mensaje "El número no puede ser negativo" si la condición es true
+	}
+	return Math.sqrt(numero); //Devuelvo el valor de la raíz cuadrada del número si la condición es false
+}
+
+console.log (calcularRaizCuadrada(-9)); //Devuelve el mensaje "El número no puede ser negativo" - se pasó el valor -9 como parámetro
+console.log (calcularRaizCuadrada(9)); //Devuelve el valor 3 - se pasó el valor 9 como parámetro
+
+
+// DECLARAR OBJETOS
+
+var miObjeto = {}; //Declaro un objeto vacío
+var miObjeto = { //Declaro un objeto con propiedades
+	nombre: "Juan", //Propiedad nombre con valor "Juan"
+	apellido: "Pérez", //Propiedad apellido con valor "Pérez"
+	edad: 25, //Propiedad edad con valor 25
+	telefono: "1234567890", //Propiedad telefono con valor "1234567890"
+	direccion: { //Propiedad direccion con valor de tipo objeto
+		calle: "Calle Falsa", //Propiedad calle con valor "Calle Falsa"
+		numero: 123, //Propiedad numero con valor 123
+		ciudad: "Buenos Aires", //Propiedad ciudad con valor "Buenos Aires"
+		provincia: "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
+	}
+};
+
+console.log(miObjeto.nombre); //Muestro en consola el valor "Juan" - se pasó el valor "Juan" como parámetro
+console.log(miObjeto.direccion.calle); //Muestro en consola el valor "Calle Falsa" - se pasó el valor "Calle Falsa" como parámetro
+
+//corchetes
+var miObjetoDos = {}; //Declaro un objeto vacío
+var miObjetoDos = { //Declaro un objeto con propiedades
+	"primer nombre": "Juan", //Propiedad nombre con valor "Juan"
+	"primer apellido": "Pérez", //Propiedad apellido con valor "Pérez"
+	"edad": 25, //Propiedad edad con valor 25
+	"telefono celular": "1234567890", //Propiedad telefono con valor "1234567890"
+	"direccion": { //Propiedad direccion con valor de tipo objeto
+		"calle": "Calle Falsa", //Propiedad calle con valor "Calle Falsa"
+		"numero": 123, //Propiedad numero con valor 123
+		"ciudad de residencia": "Buenos Aires", //Propiedad ciudad con valor "Buenos Aires"
+		"provincia": "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
+	}
+};
+
+console.log(miObjetoDos["primer apellido"]); //Muestro en consola el valor "Pérez" - se pasó el valor "Pérez" como parámetro
+
+//Acceder a propiedades de un objeto usando variables
+var miObjetoTres = { //Declaro un objeto con propiedades
+	nombre: "Juan", //Propiedad nombre con valor "Juan"
+	apellido: "Pérez", //Propiedad apellido con valor "Pérez"
+	edad: 25, //Propiedad edad con valor 25
+	telefono: "1234567890", //Propiedad telefono con valor "1234567890"
+	direccion: { //Propiedad direccion con valor de tipo objeto
+		calle: "Calle Falsa", //Propiedad calle con valor "Calle Falsa"
+		numero: 123, //Propiedad numero con valor 123
+		ciudad: "Buenos Aires", //Propiedad ciudad con valor "Buenos Aires"
+		provincia: "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
+	}
+};
+
+var propiedad = "nombre"; //Declaro una variable con el valor "nombre"
+console.log(miObjetoTres[propiedad]); //Muestro en consola el valor "Juan" - se pasó el valor "Juan" como parámetro	
+
+//Actualizar propiedades de un objeto
+var miObjetoCuatro = { //Declaro un objeto con propiedades
+	nombre: "Juan", //Propiedad nombre con valor "Juan"
+	apellido: "Pérez", //Propiedad apellido con valor "Pérez"
+	edad: 25, //Propiedad edad con valor 25
+	telefono: "1234567890", //Propiedad telefono con valor "1234567890"
+	posesion: ["casa", "auto", "moto"], //Propiedad pocesion con valor de tipo array
+	direccion: { //Propiedad direccion con valor de tipo objeto
+		calle: "Calle Falsa", //Propiedad calle con valor "Calle Falsa"
+		numero: 123, //Propiedad numero con valor 123
+		ciudad: "Buenos Aires", //Propiedad ciudad con valor "Buenos Aires"
+		provincia: "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
+	}
+};
+
+miObjetoCuatro.nombre = "Agustín"; //Actualizo el valor de la propiedad nombre
+console.log(miObjetoCuatro.nombre); //Muestro en consola el valor "Agustín" - se pasó el valor "Agustín" como parámetro
+console.log(miObjetoCuatro.posesion); //Muestro en consola el array ["casa", "auto", "moto"] - se pasó el array ["casa", "auto", "moto"] como parámetro
+
+//Agregar propiedades a un objeto 
+miObjetoCuatro.posesion.push("avión"); //Agrego un nuevo elemento al array posesion utilizando el método push
+console.log(miObjetoCuatro.posesion); //Muestro en consola el array ["casa", "auto", "moto", "avión"] - se pasó el array ["casa", "auto", "moto", "avión"] como parámetro
+
+
+
 
 
 
