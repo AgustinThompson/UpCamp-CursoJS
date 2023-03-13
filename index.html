@@ -234,5 +234,172 @@ console.log (8 === "8"); //Operador de igualdad estricta (===) - Compara dos val
 console.log (6 != "6");  //Operador de desigualdad (!=) - Compara dos valores y devuelve true si son diferentes (No compara el tipo de dato)
 console.log ( 7 !== "67"); //Operador de desigualdad estricta (!==) - Compara dos valores y devuelve true si son diferentes y de distinto tipo de dato
 
+//OPERADORES AND (&&) y OR (||)
+console.log (true && true); //Operador AND (&&) - Devuelve true si ambos operandos son true
+console.log (true && false); //Operador AND (&&) - Devuelve true si ambos operandos son true
+console.log (false && true); //Operador AND (&&) - Devuelve true si ambos operandos son true
+console.log (false && false); //Operador AND (&&) - Devuelve true si ambos operandos son true
+console.log (true || true); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+console.log (true || false); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+console.log (false || true); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+console.log (false || false); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+
+/*
+  x	      y	      x && y    x || y
+false	false	  false	    false
+false	true	  false	    true
+true	false	  false	    true
+true	true	  true	    true
+*/
+
+
+//Operador NOT (!)
+console.log (!true); //Operador NOT (!) - Devuelve false si el operando es true
+//ejemplo:
+var x = 10;
+if (x > 5) {
+	console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+}
+if (!(x > 5)) {
+	console.log ("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
+}	
+
+
+//ESTRUCTURA CONDICIONAL IF
+var edad = 18;
+if (edad < 18) {
+	console.log ("Eres menor de edad"); //Muestro en consola el mensaje "Eres menor de edad" si la condición es true
+} else {
+	console.log ("Eres mayor de edad"); //Muestro en consola el mensaje "Eres mayor de edad" si la condición es false
+}
+
+var x = 10;
+if (x > 5) {
+	console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+} else {
+	console.log ("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
+}
+
+//CLAUSULA ELSE
+var x = 10;
+if (x > 5) {
+	console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+} else {
+	console.log ("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
+}
+
+//CLAUSULA ELSE IF
+var x = 10;
+if (x > 5) {
+	console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+} else if (x < 5) {
+	console.log ("x es menor que 5"); //Muestro en consola el mensaje "x es menor que 5" si la condición es true
+} else {
+	console.log ("x es igual a 5"); //Muestro en consola el mensaje "x es igual a 5" si la condición es false
+}
+
+//SENTENCIAS SWITCH
+//Ejemplo usando console.log sin usar funciones
+var x = 10;
+switch (x) {
+	case 1:
+		console.log ("x es igual a 1"); //Muestro en consola el mensaje "x es igual a 1" si la condición es true
+		break;
+	case 2:
+		console.log ("x es igual a 2"); //Muestro en consola el mensaje "x es igual a 2" si la condición es true
+		break;
+	case 3:
+		console.log ("x es igual a 3"); //Muestro en consola el mensaje "x es igual a 3" si la condición es true
+		break;
+	case 4:
+		console.log ("x es igual a 4"); //Muestro en consola el mensaje "x es igual a 4" si la condición es true
+		break;
+	case 5:
+		console.log ("x es igual a 5"); //Muestro en consola el mensaje "x es igual a 5" si la condición es true
+		break;
+	default:
+		console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es false
+} 
+
+//Ejemplo usando funciones
+function mensaje (x) {
+	switch (x) {
+		case 1:
+			return "x es igual a 1"; //Devuelvo el mensaje "x es igual a 1" si la condición es true
+			break;
+		case 2:
+			return "x es igual a 2"; //Devuelvo el mensaje "x es igual a 2" si la condición es true
+			break;
+		case 3:
+			return "x es igual a 3"; //Devuelvo el mensaje "x es igual a 3" si la condición es true
+			break;
+		case 4:
+			return "x es igual a 4"; //Devuelvo el mensaje "x es igual a 4" si la condición es true
+			break;
+		case 5:
+			return "x es igual a 5"; //Devuelvo el mensaje "x es igual a 5" si la condición es true
+			break;
+		default:
+			return "x es mayor que 5"; //Devuelvo el mensaje "x es mayor que 5" si la condición es false
+	}
+}
+console.log (mensaje (1)); //Muestro en consola el mensaje "x es igual a 1" si la condición es true - se pasó el valor 1 como parámetro
+console.log (mensaje (2)); //Muestro en consola el mensaje "x es igual a 2" si la condición es true - se pasó el valor 2 como parámetro
+
+// Switch usando opción predeterminada
+function seleccionarIdioma(valor){
+	var idioma; //Declaro la variable idioma
+	switch (valor) { //Ejecuto la sentencia switch
+		case "es": //Si el valor de la variable valor es "es"
+			idioma = "Español"; //Asigno el valor "Español" a la variable idioma	
+			break;
+		case "en":
+			idioma = "Inglés";
+			break;
+		case "fr":
+			idioma = "Francés";
+			break;
+		default:
+			idioma = "No se ha seleccionado ningún idioma"; //Devuelvo el mensaje "No se ha seleccionado ningún idioma" si la condición es false
+	}
+
+}
+
+//Switch mulitples casos
+function seleccionarIdioma(valor){
+	var idioma; //Declaro la variable idioma
+	switch (valor) { //Ejecuto la sentencia switch
+		case "es": //Si el valor de la variable valor es "es"
+		case "es-AR": //O si el valor de la variable valor es "es-AR"
+		case "es-ES": //O si el valor de la variable valor es "es-ES"
+			idioma = "Español"; //Asigno el valor "Español" a la variable idioma	
+			break;
+		case "en":
+		case "en-US":
+		case "en-GB":
+			idioma = "Inglés";
+			break;
+		case "fr":
+		case "fr-FR":
+		case "fr-CA":
+			idioma = "Francés";
+			break;
+		default:
+			idioma = "No se ha seleccionado ningún idioma"; //Devuelvo el mensaje "No se ha seleccionado ningún idioma" si la condición es false
+	}
+	return idioma; //Devuelvo el valor de la variable idioma
+}
+console.log (seleccionarIdioma ("es")); //Muestro en consola el mensaje "Español" si la condición es true - se pasó el valor "es" como parámetro
+console.log (seleccionarIdioma ("en")); //Muestro en consola el mensaje "Inglés" si la condición es true - se pasó el valor "en" como parámetro
+console.log (seleccionarIdioma ("fr")); //Muestro en consola el mensaje "Francés" si la condición es true - se pasó el valor "fr" como parámetro
+console.log (seleccionarIdioma ("pt")); //Muestro en consola el mensaje "No se ha seleccionado ningún idioma" si la condición es false - se pasó el valor "pt" como parámetro
+
+
+
+
+
+
+
+
 
 </script>
