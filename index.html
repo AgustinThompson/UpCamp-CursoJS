@@ -568,6 +568,101 @@ console.log(miBici.hasOwnProperty("marca")); //Muestro en consola el valor true 
 console.log(miBici.hasOwnProperty("modelo")); //Muestro en consola el valor false - se pasó el valor false como parámetro
 
 
+//Función que verifica la existencia de una propiedad
+
+function verificarPropiedad (obj, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
+	if (obj.hasOwnProperty(propiedad)) {
+		return "Propiedad: " + obj[propiedad]; //Si existe la propiedad Muestro en consola el valor de la misma
+	} else {
+		return "La propiedad no existe"; //Si no existe la propiedad Muestro en consola el mensaje "La propiedad no existe"
+	}
+}
+
+console. log(verificarPropiedad(miBici, "color"));
+
+
+//---------------------------------------------------------------------------------------------------
+
+//OBJETOS COMPLEJOS
+
+var ordenesDePizza = [
+	{
+		tamaño: "Grande",
+		masa: "fina",
+		ingredientes: ["jamón", "cebolla", "queso"],
+		coccion: 20,
+		delivery: true,
+	},
+	{
+		tamaño: "Mediana",
+		masa: "gruesa",
+		ingredientes: ["jamón", "cebolla", "queso", "aceitunas"],
+		coccion: 25,
+		delivery: true,
+	},
+	{
+		tamaño: "Chica",
+		masa: "fina",
+		ingredientes: ["jamón", "cebolla", "queso", "aceitunas", "champiñones"],
+		coccion: 15,
+		delivery: false,
+	},
+];	
+
+console.log(ordenesDePizza[0].ingredientes); //Muestro en consola el array ["jamón", "cebolla", "queso"] - se pasó el array ["jamón", "cebolla", "queso"] como parámetro
+
+//Función que verifica la existencia de una propiedad
+function consultaDePizzas (objeto, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
+	if (objeto.hasOwnProperty(propiedad)) {
+		return "Propiedad: " + objeto[propiedad]; //Si existe la propiedad Muestro en consola el valor de la misma
+	} else {
+		return "La propiedad no existe"; //Si no existe la propiedad Muestro en consola el mensaje "La propiedad no existe"
+	}
+}
+
+console.log(consultaDePizzas(ordenesDePizza[0], "ingredientes")); //Muestro en consola el array ["jamón", "cebolla", "queso"] - se pasó el array ["jamón", "cebolla", "queso"] como parámetro
+console.log(consultaDePizzas(ordenesDePizza[1], "masa")); //Muestro en consola el array ["jamón", "cebolla", "queso", "aceitunas"] - se pasó el array ["jamón", "cebolla", "queso", "aceitunas"] como parámetro
+
+
+
+//Objetos anidados
+
+var miReceta = { //Objeto
+	"descripcion": "Torta de chocolate",
+	"porciones": 8,
+	"costo": 22.45,
+	"ingredientes":{
+		"masa":{ //Objeto anidado
+			"harina": "2 tazas",
+			"azucar": "100 gramos",
+			"huevo": 2,
+			"levadura": "0.5 cucharaditas",
+			"manteca": "100 gramos",
+		},
+		"relleno": { //Objeto anidado
+			"chocolate": "200 gramos",
+			"crema": "1 taza",
+		},
+	},
+	"preparacion": [ //Array
+		"Mezclar la harina, el azúcar, la levadura y la manteca",
+		"Agregar los huevos y el chocolate rallado",
+		"Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos",
+	],
+};
+
+console.log(miReceta.ingredientes.masa); //Muestro en consola el objeto anidado "masa"
+console.log(miReceta.costo); //Muestro en consola el valor 22.45
+console.log("Preparación de "  + miReceta.descripcion + ": " +  miReceta.preparacion); //Muestro en consola el array ["Mezclar la harina, el azúcar, la levadura y la manteca", "Agregar los huevos y el chocolate rallado", "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos"]
+console.log ("Segundo paso: " + miReceta.preparacion[2]); //Muestro en consola el valor "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos"
+
+//muestro en consola los ingredientes de la masa con object.keys
+console.log("Ingredientes de la masa: " + Object.keys(miReceta.ingredientes.masa));
+//muestro en consola el objeto preparacion y los valores de cada paso con object.values 
+console.log("Preparación: " + Object.values(miReceta.preparacion)); // Object.values devuelve un array con los valores de cada propiedad del objeto - en este caso devuelve un array con los valores de cada paso de la preparación
+
+
+
 
 
 
