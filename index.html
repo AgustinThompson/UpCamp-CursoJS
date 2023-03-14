@@ -497,6 +497,79 @@ console.log(miObjetoCuatro.posesion); //Muestro en consola el array ["casa", "au
 miObjetoCuatro.posesion.push("avión"); //Agrego un nuevo elemento al array posesion utilizando el método push
 console.log(miObjetoCuatro.posesion); //Muestro en consola el array ["casa", "auto", "moto", "avión"] - se pasó el array ["casa", "auto", "moto", "avión"] como parámetro
 
+var curso = {
+	nombre: "Curso de JavaScript",
+	profesor: "Juan Pablo De la torre Valdez",
+	temario: ["Introducción", "Variables", "Funciones", "Objetos", "Arrays", "Bucles", "Condicionales", "DOM", "Eventos", "JSON", "AJAX", "POO", "JQuery", "Frameworks"],
+
+};
+
+console.log("Estas son las propiedades del objeto curso: "+ Object.keys(curso)); //Muestro en consola las propiedades del objeto curso con el método Object.keys que devuelve un array con las propiedades del objeto
+curso.vistas= 4300; //Agrego una nueva propiedad al objeto curso
+console.log("Estas son las nuevas propiedades del objeto curso: "+ Object.keys(curso)); //Muestro en consola las propiedades del objeto curso
+console.log (curso.vistas); //Muestro en consola el valor 4300 - se pasó el valor 4300 como parámetro
+
+//agrego la propiedad "alumnos" a mi objeto curso y le asigno los siguientes elementos: Agustín, Pedro, Juan, Lucas, Marta, María, Ana, Laura, Valeria, Valentina, Sofía, Camila, Valentina, Antonell
+curso.alumnos = ["Agustín", "Pedro", "Juan", "Lucas", "Marta", "María", "Ana", "Laura", "Valeria", "Valentina", "Sofía", "Camila", "Valentina", "Antonella"];
+
+console.log("Estas son las propiedades del objeto curso: " + Object.keys(curso)); //Muestro en consola las propiedades del objeto curso
+
+
+//Eliminar una propiedad de un objeto
+
+delete curso.vistas; //Elimino la propiedad alumnos del objeto curso	
+console.log("Estas son las propiedades del objeto curso: "+ Object.keys(curso)); //object.keys devuelve un array con las propiedades del objeto
+
+//OBJETOS PARA BÚSQUEDA - Función que busca elementos químicos por su símbolo utilizando un objeto y switch
+
+function buscaElemento (simbolo){
+
+x
+	var simbolosQuimicos = {
+		"Ale": "Aluminio",
+		"Arg": "Argón",
+		"Ca": "Calcio",
+		"Cl": "Cloro",
+		"Co": "Cobalto",
+		"Cu": "Cobre",
+		"Fe": "Hierro",
+		"K": "Potasio",
+		"Li": "Litio",
+		"Mg": "Magnesio",
+	};
+	return simbolosQuimicos[simbolo];
+}
+
+console.log("El elemento químico correspondiente a ese símbolo es: " + buscaElemento("Li")); //Muestro en consola el valor "Litio" - se pasó el valor "Li" como parámetro
+console.log("El elemento químico correspondiente a ese símbolo es: " + buscaElemento("Ca")); //Muestro en consola el valor "Calcio" - se pasó el valor "Ca" como parámetro
+console.log("El elemento químico correspondiente a ese símbolo es: " + buscaElemento("Fe")); //Muestro en consola el valor "Hierro" - se pasó el valor "Fe" como parámetro
+
+//VERIFICAR PROPIEDADES DE UN OBJETO - Función que verifica si un objeto tiene una propiedad determinada
+
+function tienePropiedad (objeto, propiedad){ //Función que recibe dos parámetros: objeto y propiedad
+	if (objeto.hasOwnProperty(propiedad)){ //Si el objeto tiene la propiedad pasada como parámetro - método hasOwnProperty devuelve true si el objeto tiene la propiedad pasada como parámetro
+		return true;
+	} else {
+		return false;
+
+	}
+}
+console.log(tienePropiedad(curso, "nombre")); //Muestro en consola el valor true - se pasó el valor true como parámetro
+
+
+//Lo mismo pero sin usar if y else
+
+var miBici = {
+	color: "Rojo",
+	marca: "Giant",
+	ruedas: 2,
+};
+console.log(miBici.hasOwnProperty("marca")); //Muestro en consola el valor true - se pasó el valor true como parámetro
+console.log(miBici.hasOwnProperty("modelo")); //Muestro en consola el valor false - se pasó el valor false como parámetro
+
+
+
+
 
 
 
