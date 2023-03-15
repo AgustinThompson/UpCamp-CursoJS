@@ -1,90 +1,90 @@
 <script>
 
     console.log("Hello World");// Declaración de variables
-    
+
     var miVariable = 10;   //Declaro la variable miVariable
-    
+
     console.log(miVariable);    //Muestro el valor de la variable miVariable
-    
+
     miVariable = "Hola Mundo";  //Reasigno el valor de la variable miVariable
-    
-    console.log(miVariable);  
+
+    console.log(miVariable);
     miVariableAlrevés = miVariable.split("").reverse().join(""); //split divide la cadena en un array, reverse invierte el array y join une el array en una cadena
-    
-    miVariableDos = miVariable + " al revés es " +  miVariableAlrevés; //Concatenación de cadenas   
-    
+
+    miVariableDos = miVariable + " al revés es " + miVariableAlrevés; //Concatenación de cadenas   
+
     console.log(miVariableDos); //Muestro el valor de la variable miVariableDos
-    
+
     console.log("La cantidad de caracteres de mi Variable Dos es: " + miVariableDos.length); //Muestro la longitud de la cadena
-    
+
     console.log(miVariableDos.toUpperCase());   //Muestro la cadena en mayúsculas
-    
+
     var suma = 10 + 15;
     console.log("El resultado de la suma es: " + suma); //Muestro el valor de la variable suma
-    
+
     suma++; //adición de 1 a la variable suma (es lo mismo que suma = suma + 1)
-    
+
     suma += 2; //adición de 2 a la variable suma (es lo mismo que suma = suma + 2)
-    
+
     console.log("El resultado de la suma adicionandole 2 es: " + suma);
-    console.log("El resultado de la suma adicionandole 1 es: " + suma);    
+    console.log("El resultado de la suma adicionandole 1 es: " + suma);
     suma--;
     console.log("El resultado de la suma restandole 1 es: " + suma);
     multiplicacion = 10 * suma;
     console.log("El resultado de la multiplicación de 10 x suma es: " + multiplicacion);
-    
+
     //STRINGS
     var miString = "Hola Mundo";
     console.log(miString);
     var miStringDos = 'Hola Mundo';
-    var stringConComillas = "Hola 'Mundo'";     
+    var stringConComillas = "Hola 'Mundo'";
     var stringConComillasDos = 'Hola "Mundo"';
     var stringConComillasTres = 'Hola \'Mundo\''; //Se usa la barra invertida para escapar las comillas
-    
-    var stringConComillasCuatro = "Hola \"Mundo\""; 
+
+    var stringConComillasCuatro = "Hola \"Mundo\"";
     var stringConComillasCinco = "Hola \"Mundo\" 'Hola Mundo'"; //Se puede usar comillas dobles y simples
-    
+
     console.log(stringConComillasCinco);
     console.log(stringConComillasCuatro);
     console.log(stringConComillasTres);
     console.log(stringConComillasDos);
     console.log(stringConComillas);
-    
+
     //JAVASCRIPT 
     var jS = "JavaScript"; //Declaro la variable jS
-    
+
     console.log([jS.length]); //Muestro la longitud de la cadena
-    
+
     console.log(jS[jS.length - 1]); //Último caracter de la cadena es siempre la longitud -1
-    
+
     //CONCATENANDO VARIABLES 
     var nombre = "Juan";
     var apellido = "Perez";
     var edad = 30;
     var texto = "Mi nombre es " + nombre + " " + apellido + " y tengo " + edad + " años"; //Concatenación de variables nombre, apellido y edad
     console.log(texto);
-    
+
     //CONCATENANDO VARIABLES CON TEMPLATE STRING
     var edad = 45;
     var nombre = "Pichulo";
     var apellido = "Sacamoco";
     var textoDos = `Mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`; //Concatenación de variables nombre, apellido y edad
     console.log(textoDos);
-    
+
     //CONCATENANDO VARIABLES CON TEMPLATE STRING Y FUNCIONES
     var edad = 109;
     var nombre = "Ataulfo";
     var apellido = "Castañas";
     var textoTres = `Mi nombre es ${nombre.toUpperCase()} ${apellido.toUpperCase()} y tengo ${edad} años.`; //Concatenación de variables nombre, apellido y edad y uso de funciones toUpperCase para convertir a mayúsculas la cadena de texto de las variables nombre y apellido 
     console.log(textoTres);
-    
+
     //ARRAYS
     var miArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Declaro el array miArray
     console.log(miArray); //Muestro el array miArray
     console.log(miArray[0]); //Muestro el primer elemento del array miArray
     console.log(miArray[miArray.length - 1]); //Muestro el último elemento del array miArray
     console.log(miArray[miArray.length - 2]); //Muestro el penúltimo elemento del array miArray
-    
+
     //ARRAYS MULTIDIMENSIONALES
     var miArrayMultidimensional = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; //Declaro el array multidimensional miArrayMultidimensional
     console.log(miArrayMultidimensional); //Muestro el array multidimensional miArrayMultidimensional
@@ -97,53 +97,53 @@
     console.log(miArrayMultidimensional[1][2]); //Muestro el tercer elemento del segundo elemento del array multidimensional miArrayMultidimensional
     console.log(miArrayMultidimensional[2][0]); //Muestro el primer elemento del tercer elemento del array multidimensional miArrayMultidimensional
     console.log(miArrayMultidimensional[2][1]); //Muestro el segundo elemento del tercer elemento del array multidimensional miArrayMultidimensional
-    
+
     //ARRAYS CON VARIABLES
     var miArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Declaro el array miArray
     var miVariable = 10; //Declaro la variable miVariable
     console.log(miArray[miVariable]); //Muestro el elemento del array miArray que corresponde al valor de la variable miVariable
-    
+
     //POP - elimina el último elemento del array
     var miArrayDeFormas = ["Cuadrado", " Rectángulo", " Triángulo", " Círculo", " Rombo", " Trapecio", " Pentágono"];
     console.log(miArrayDeFormas);
     miArrayDeFormas.pop(); //Elimino el último elemento del array miArrayDeFormas
     console.log(miArrayDeFormas);
-    
+
     //PUSH - agrega un elemento al final del array
     miArrayDeFormas.push(" Hexágono"); //Agrego un elemento al final del array miArrayDeFormas  
     console.log(miArrayDeFormas + " --> Se agregó el elemento  'Hexágono' al final del array");
-    
+
     //SHIFT - elimina el primer elemento del array
     miArrayDeFormas.shift(); //Elimino el primer elemento del array miArrayDeFormas
     console.log(miArrayDeFormas + " --> Se eliminó el primer elemento del array (Cuadrado)");
-    
+
     //UNSHIFT - agrega un elemento al principio del array
     miArrayDeFormas.unshift("Cuadrado"); //Agrego un elemento al principio del array miArrayDeFormas    
-    console.log(miArrayDeFormas + " --> Se agregó el elemento  'Cuadrado' al principio del array"); 
-    
+    console.log(miArrayDeFormas + " --> Se agregó el elemento  'Cuadrado' al principio del array");
+
     //SPLICE - Agregar un elemento al array en determinado lugar
-    
+
     let fruitsAdd = ["apple", "banana", "orange"];
-    
+
     // Agregar "mango" y "kiwi" después del segundo elemento
     fruitsAdd.splice(2, 0, "mango", "kiwi"); //El primer parámetro indica la posición donde se insertará el elemento, el segundo parámetro indica la cantidad de elementos que se eliminarán a partir de la posición indicada en el primer parámetro y los parámetros restantes indican los elementos que se insertarán a partir de la posición indicada en el primer parámetro
     console.log(fruitsAdd); // ["apple", "banana", "mango", "kiwi", "orange"]
-    
-    
+
+
     //SPLICE -  Eliminar un elemento del array en determinado lugar
-    
+
     let fruitsDelete = ["apple", "banana", "orange"];
     // Eliminar el segundo elemento
     fruitsDelete.splice(1, 1);
     console.log(fruitsDelete); // ["apple", "orange"] //El primer parámetro indica la posición donde se insertará el elemento, el segundo parámetro indica la cantidad de elementos que se eliminarán a partir de la posición indicada en el primer parámetro y los parámetros restantes indican los elementos que se insertarán a partir de la posición indicada en el primer parámetro
-    
-    
+
+
     //SPLICE -  Reemplazar un elemento del array en determinado lugar
-    
+
     var miArrayMultidimensionalDos = [["Azul", 4], ["Rojo", 7], ["Verde", 18], ["Negro", 10]];
     console.log(miArrayMultidimensionalDos);
     var titulo = "Stock de Pinturas: \n\n"; //Declaro la variable titulo y le asigno el valor "Stock de Pinturas: \n\n"
-    console.log(titulo.toLocaleUpperCase() + "\t" + miArrayMultidimensionalDos[0][0] + ": " + "\t" + miArrayMultidimensionalDos[0][1] + " unidades \n "  + "\t" + miArrayMultidimensionalDos[1][0] + ": " + miArrayMultidimensionalDos[1][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[2][0] + ": " + miArrayMultidimensionalDos[2][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[3][0] + ": " + miArrayMultidimensionalDos[3][1] + " unidades \n"); //Muestro el valor de la variable titulo y el contenido del array miArrayMultidimensionalDos en forma de tabla con saltos de línea (\n) y tabulaciones (\t) para que se vea ordenado 
+    console.log(titulo.toLocaleUpperCase() + "\t" + miArrayMultidimensionalDos[0][0] + ": " + "\t" + miArrayMultidimensionalDos[0][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[1][0] + ": " + miArrayMultidimensionalDos[1][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[2][0] + ": " + miArrayMultidimensionalDos[2][1] + " unidades \n " + "\t" + miArrayMultidimensionalDos[3][0] + ": " + miArrayMultidimensionalDos[3][1] + " unidades \n"); //Muestro el valor de la variable titulo y el contenido del array miArrayMultidimensionalDos en forma de tabla con saltos de línea (\n) y tabulaciones (\t) para que se vea ordenado 
     /*
     
     STOCK DE PINTURAS: 
@@ -154,27 +154,27 @@
          Negro: 10 unidades 
     
     */
-    
+
     //FUNCIONES
-    
+
     //Función para mostrar un mensaje en consola
     var mensajeDeMiFuncion = "Este es el mensaje que muestra la función 'miFuncion'"; //Declaro la variable mensajeDeMiFuncion y le asigno el valor "Este es el mensaje que muestra la función 'miFuncion'". Este mensaje se mostrará en consola cuando se ejecute la función miFuncion y podemos cambiarlo para que muestre cualquier otro mensaje.
     function miFuncion() { //Declaro la función miFuncion. A partir de la llave de apertura de la función se ejecuta el código que se encuentra dentro de la función
-    
+
         console.log(mensajeDeMiFuncion); //Muestro en consola el texto "Hola Mundo"
     } // Cierre de la función miFuncion
     miFuncion(); //Ejecuto la función miFuncion
     var mensajeDeMiFuncion = "Este es el nuevo mensaje de la función 'miFuncion' :)"; //Declaro la variable mensajeDeMiFuncion y le asigno el valor "Este es el nuevo mensaje de la función 'miFuncion'". Este mensaje se mostrará en consola cuando se ejecute la función miFuncion y podemos cambiarlo para que muestre cualquier otro mensaje.
-    
+
     miFuncion(); //Ejecuto la función miFuncion y se mostrará el nuevo mensaje que le asignamos a la variable mensajeDeMiFuncion
-    
-    
+
+
     //Función que suma utilizando parámetros
-    function sumar(sum1, sum2){
+    function sumar(sum1, sum2) {
         suma = sum1 + sum2;
         console.log("El resultado de: " + sum1 + " + " + sum2 + " = " + suma); // Muestro en consola el resultado de la suma de los números que le pasamos como parámetros a la función sumar
     }
-    
+
     sumar(5, 10); //Ejecuto la función sumar y le paso como parámetros los números 5 y 10
     // El resultado de: 5 + 10 = 15
     sumar(1297, 230); //Ejecuto la función sumar y le paso como parámetros los números 1297 y 230
@@ -183,67 +183,67 @@
     // El resultado de: 900 + 1000 = 1900
     sumar(19363, 363930);
     // El resultado de: 19363 + 363930 = 383293
-    
+
     //Función que concatena Strings utilizando parámetros y adicionando espacios entre los Strings.
-    function concatenarStrings(string1, string2, string3){
+    function concatenarStrings(string1, string2, string3) {
         console.log(string1 + " " + string2 + " " + string3); // Muestro en consola el resultado de la concatenación de los Strings que le pasamos como parámetros a la función concatenarStrings
     }
-    concatenarStrings("Me", "llamo","Agustin"); //Ejecuto la función concatenarStrings y le paso como parámetros los Strings "Me", "llamo" y "Agustin"
-    
+    concatenarStrings("Me", "llamo", "Agustin"); //Ejecuto la función concatenarStrings y le paso como parámetros los Strings "Me", "llamo" y "Agustin"
+
     //Retornar un valor de una función
-    function multiplicar(mult1, mult2){
+    function multiplicar(mult1, mult2) {
         multiplicacion = mult1 * mult2; //Multiplico los números que le pasamos como parámetros a la función multiplicar y lo asigno a la variable multiplicacion
         return multiplicacion; //Retorno el valor de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
     }
     //Otra forma de retornar el valor es 'return mult1 * mult2;` y no es necesario declarar la variable multiplicacion
-    function multiplicar(mult1, mult2){
+    function multiplicar(mult1, mult2) {
         return mult1 * mult2; //Retorno el valor de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
     }
     var resultado = multiplicar(5, 10); //Ejecuto la función multiplicar y le paso como parámetros los números 5 y 10. El resultado de la multiplicación se lo asigno a la variable resultado
-    
-    console.log (multiplicar(5, 10)); //Muestro en consola el resultado de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
-    
+
+    console.log(multiplicar(5, 10)); //Muestro en consola el resultado de la multiplicación de los números que le pasamos como parámetros a la función multiplicar
+
     //valor resultado de una función es Undefined
-    function multiplicacionDos(multi1, multi2){
+    function multiplicacionDos(multi1, multi2) {
         console.log(multi1 * multi2); //Muestro en consola el resultado de la operación de los números que le pasamos como parámetros a la función multiplicar. Pero no se retorna ningún valor
     }
     console.log(multiplicacionDos(8, 8)); //Ejecuto la función multiplicar y le paso como parámetros los números 8 y 8. El valor a mostrar es undefined porque no se retorna ningún valor en la función multiplicar. Si se retorna un valor, el valor a mostrar sería el resultado de la operación de los números que le pasamos como parámetros a la función multiplicar
-    
+
     //Función que concatena Strings utilizando parámetros y adicionando espacios entre los Strings.
     function crearCadenaConMeta(lenguajeDeProgramacion) {	//Declaro la función crearCadenaConMeta y le paso como parámetro el String "lenguajeDeProgramacion"
         return "El lenguaje de programación que estoy aprendiendo es: " + lenguajeDeProgramacion; //Retorno el valor de la concatenación de los Strings que le pasamos como parámetros a la función crearCadenaConMeta
     }
     var lenguajeDeProgramacion = crearCadenaConMeta("JavaScript"); //Ejecuto la función crearCadenaConMeta y le paso como parámetro el String "JavaScript". El resultado de la concatenación se lo asigno a la variable lenguajeDeProgramacion
     console.log(lenguajeDeProgramacion); //Muestro en consola el valor de la variable lenguajeDeProgramacion
-    
+
     //Función que toma un array y un número (elemento) como argumentos. Agrega el número al final del array y elimina el primer elemento del array. Retorna el elemento eliminado.
     function proximoEnLinea(linea, elemento) { //Declaro la función proximoEnLinea y le paso como parámetros el array "linea" y el número "elemento"
         linea.push(elemento); //Agrego el número que le pasamos como parámetro a la función proximoEnLinea al final del array que le pasamos como parámetro a la función proximoEnLinea
         return linea.shift(); //Elimino el primer elemento del array que le pasamos como parámetro a la función proximoEnLinea y retorno el elemento eliminado
     }
     var miArray = [1, 2, 3, 4, 5]; //Declaro la variable miArray y le asigno el array [1, 2, 3, 4, 5]
-    console.log ("El array antes de ejecutar la función proximoEnLinea es: " + JSON.stringify(miArray)); //Muestro en consola el array que le asignamos a la variable miArray
+    console.log("El array antes de ejecutar la función proximoEnLinea es: " + JSON.stringify(miArray)); //Muestro en consola el array que le asignamos a la variable miArray
     console.log(proximoEnLinea(miArray, 6)); //Ejecuto la función proximoEnLinea y le paso como parámetros el array que le asignamos a la variable miArray y el número 6. Muestro en consola el elemento eliminado del array que le asignamos a la variable miArray
-    console.log ("El array después de ejecutar la función proximoEnLinea es: " + JSON.stringify(miArray)); //Muestro en consola el array que le asignamos a la variable miArray
-    
+    console.log("El array después de ejecutar la función proximoEnLinea es: " + JSON.stringify(miArray)); //Muestro en consola el array que le asignamos a la variable miArray
+
     //OPERADORES DE COMPARACIÓN
-    console.log (9 == 9);  //Operador de igualdad (==) -  Compara dos valores y devuelve true si son iguales (No compara el tipo de dato)
-    console.log (9 == "9"); //Operador de igualdad (==) -  Compara dos valores y devuelve true si son iguales (No compara el tipo de dato)
-    console.log (8 === 8); //Operador de igualdad estricta (===) - Compara dos valores y devuelve true si son iguales y del mismo tipo de dato
-    console.log (8 === "8"); //Operador de igualdad estricta (===) - Compara dos valores y devuelve true si son iguales y del mismo tipo de dato
-    console.log (6 != "6");  //Operador de desigualdad (!=) - Compara dos valores y devuelve true si son diferentes (No compara el tipo de dato)
-    console.log ( 7 !== "67"); //Operador de desigualdad estricta (!==) - Compara dos valores y devuelve true si son diferentes y de distinto tipo de dato
-    
+    console.log(9 == 9);  //Operador de igualdad (==) -  Compara dos valores y devuelve true si son iguales (No compara el tipo de dato)
+    console.log(9 == "9"); //Operador de igualdad (==) -  Compara dos valores y devuelve true si son iguales (No compara el tipo de dato)
+    console.log(8 === 8); //Operador de igualdad estricta (===) - Compara dos valores y devuelve true si son iguales y del mismo tipo de dato
+    console.log(8 === "8"); //Operador de igualdad estricta (===) - Compara dos valores y devuelve true si son iguales y del mismo tipo de dato
+    console.log(6 != "6");  //Operador de desigualdad (!=) - Compara dos valores y devuelve true si son diferentes (No compara el tipo de dato)
+    console.log(7 !== "67"); //Operador de desigualdad estricta (!==) - Compara dos valores y devuelve true si son diferentes y de distinto tipo de dato
+
     //OPERADORES AND (&&) y OR (||)
-    console.log (true && true); //Operador AND (&&) - Devuelve true si ambos operandos son true
-    console.log (true && false); //Operador AND (&&) - Devuelve true si ambos operandos son true
-    console.log (false && true); //Operador AND (&&) - Devuelve true si ambos operandos son true
-    console.log (false && false); //Operador AND (&&) - Devuelve true si ambos operandos son true
-    console.log (true || true); //Operador OR (||) - Devuelve true si alguno de los operandos es true
-    console.log (true || false); //Operador OR (||) - Devuelve true si alguno de los operandos es true
-    console.log (false || true); //Operador OR (||) - Devuelve true si alguno de los operandos es true
-    console.log (false || false); //Operador OR (||) - Devuelve true si alguno de los operandos es true
-    
+    console.log(true && true); //Operador AND (&&) - Devuelve true si ambos operandos son true
+    console.log(true && false); //Operador AND (&&) - Devuelve true si ambos operandos son true
+    console.log(false && true); //Operador AND (&&) - Devuelve true si ambos operandos son true
+    console.log(false && false); //Operador AND (&&) - Devuelve true si ambos operandos son true
+    console.log(true || true); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+    console.log(true || false); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+    console.log(false || true); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+    console.log(false || false); //Operador OR (||) - Devuelve true si alguno de los operandos es true
+
     /*
       x	      y	      x && y    x || y
     false	false	  false	    false
@@ -251,78 +251,78 @@
     true	false	  false	    true
     true	true	  true	    true
     */
-    
-    
+
+
     //Operador NOT (!)
-    console.log (!true); //Operador NOT (!) - Devuelve false si el operando es true
+    console.log(!true); //Operador NOT (!) - Devuelve false si el operando es true
     //ejemplo:
     var x = 10;
     if (x > 5) {
-        console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+        console.log("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
     }
     if (!(x > 5)) {
-        console.log ("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
-    }	
-    
-    
+        console.log("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
+    }
+
+
     //ESTRUCTURA CONDICIONAL IF
     var edad = 18;
     if (edad < 18) {
-        console.log ("Eres menor de edad"); //Muestro en consola el mensaje "Eres menor de edad" si la condición es true
+        console.log("Eres menor de edad"); //Muestro en consola el mensaje "Eres menor de edad" si la condición es true
     } else {
-        console.log ("Eres mayor de edad"); //Muestro en consola el mensaje "Eres mayor de edad" si la condición es false
+        console.log("Eres mayor de edad"); //Muestro en consola el mensaje "Eres mayor de edad" si la condición es false
     }
-    
+
     var x = 10;
     if (x > 5) {
-        console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+        console.log("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
     } else {
-        console.log ("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
+        console.log("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
     }
-    
+
     //CLAUSULA ELSE
     var x = 10;
     if (x > 5) {
-        console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+        console.log("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
     } else {
-        console.log ("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
+        console.log("x no es mayor que 5"); //Muestro en consola el mensaje "x no es mayor que 5" si la condición es false
     }
-    
+
     //CLAUSULA ELSE IF
     var x = 10;
     if (x > 5) {
-        console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
+        console.log("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es true
     } else if (x < 5) {
-        console.log ("x es menor que 5"); //Muestro en consola el mensaje "x es menor que 5" si la condición es true
+        console.log("x es menor que 5"); //Muestro en consola el mensaje "x es menor que 5" si la condición es true
     } else {
-        console.log ("x es igual a 5"); //Muestro en consola el mensaje "x es igual a 5" si la condición es false
+        console.log("x es igual a 5"); //Muestro en consola el mensaje "x es igual a 5" si la condición es false
     }
-    
+
     //SENTENCIAS SWITCH
     //Ejemplo usando console.log sin usar funciones
     var x = 10;
     switch (x) {
         case 1:
-            console.log ("x es igual a 1"); //Muestro en consola el mensaje "x es igual a 1" si la condición es true
+            console.log("x es igual a 1"); //Muestro en consola el mensaje "x es igual a 1" si la condición es true
             break;
         case 2:
-            console.log ("x es igual a 2"); //Muestro en consola el mensaje "x es igual a 2" si la condición es true
+            console.log("x es igual a 2"); //Muestro en consola el mensaje "x es igual a 2" si la condición es true
             break;
         case 3:
-            console.log ("x es igual a 3"); //Muestro en consola el mensaje "x es igual a 3" si la condición es true
+            console.log("x es igual a 3"); //Muestro en consola el mensaje "x es igual a 3" si la condición es true
             break;
         case 4:
-            console.log ("x es igual a 4"); //Muestro en consola el mensaje "x es igual a 4" si la condición es true
+            console.log("x es igual a 4"); //Muestro en consola el mensaje "x es igual a 4" si la condición es true
             break;
         case 5:
-            console.log ("x es igual a 5"); //Muestro en consola el mensaje "x es igual a 5" si la condición es true
+            console.log("x es igual a 5"); //Muestro en consola el mensaje "x es igual a 5" si la condición es true
             break;
         default:
-            console.log ("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es false
-    } 
-    
+            console.log("x es mayor que 5"); //Muestro en consola el mensaje "x es mayor que 5" si la condición es false
+    }
+
     //Ejemplo usando funciones
-    function mensaje (x) {
+    function mensaje(x) {
         switch (x) {
             case 1:
                 return "x es igual a 1"; //Devuelvo el mensaje "x es igual a 1" si la condición es true
@@ -343,11 +343,11 @@
                 return "x es mayor que 5"; //Devuelvo el mensaje "x es mayor que 5" si la condición es false
         }
     }
-    console.log (mensaje (1)); //Muestro en consola el mensaje "x es igual a 1" si la condición es true - se pasó el valor 1 como parámetro
-    console.log (mensaje (2)); //Muestro en consola el mensaje "x es igual a 2" si la condición es true - se pasó el valor 2 como parámetro
-    
+    console.log(mensaje(1)); //Muestro en consola el mensaje "x es igual a 1" si la condición es true - se pasó el valor 1 como parámetro
+    console.log(mensaje(2)); //Muestro en consola el mensaje "x es igual a 2" si la condición es true - se pasó el valor 2 como parámetro
+
     // Switch usando opción predeterminada
-    function seleccionarIdioma(valor){
+    function seleccionarIdioma(valor) {
         var idioma; //Declaro la variable idioma
         switch (valor) { //Ejecuto la sentencia switch
             case "es": //Si el valor de la variable valor es "es"
@@ -362,11 +362,11 @@
             default:
                 idioma = "No se ha seleccionado ningún idioma"; //Devuelvo el mensaje "No se ha seleccionado ningún idioma" si la condición es false
         }
-    
+
     }
-    
+
     //Switch mulitples casos
-    function seleccionarIdioma(valor){
+    function seleccionarIdioma(valor) {
         var idioma; //Declaro la variable idioma
         switch (valor) { //Ejecuto la sentencia switch
             case "es": //Si el valor de la variable valor es "es"
@@ -389,40 +389,40 @@
         }
         return idioma; //Devuelvo el valor de la variable idioma
     }
-    console.log (seleccionarIdioma ("es")); //Muestro en consola el mensaje "Español" si la condición es true - se pasó el valor "es" como parámetro
-    console.log (seleccionarIdioma ("en")); //Muestro en consola el mensaje "Inglés" si la condición es true - se pasó el valor "en" como parámetro
-    console.log (seleccionarIdioma ("fr")); //Muestro en consola el mensaje "Francés" si la condición es true - se pasó el valor "fr" como parámetro
-    console.log (seleccionarIdioma ("pt")); //Muestro en consola el mensaje "No se ha seleccionado ningún idioma" si la condición es false - se pasó el valor "pt" como parámetro
-    
+    console.log(seleccionarIdioma("es")); //Muestro en consola el mensaje "Español" si la condición es true - se pasó el valor "es" como parámetro
+    console.log(seleccionarIdioma("en")); //Muestro en consola el mensaje "Inglés" si la condición es true - se pasó el valor "en" como parámetro
+    console.log(seleccionarIdioma("fr")); //Muestro en consola el mensaje "Francés" si la condición es true - se pasó el valor "fr" como parámetro
+    console.log(seleccionarIdioma("pt")); //Muestro en consola el mensaje "No se ha seleccionado ningún idioma" si la condición es false - se pasó el valor "pt" como parámetro
+
     //RETORNANDO VALORES BOOLEANOS
-    function esMayorQue (a, b) {
+    function esMayorQue(a, b) {
         return a > b; //Devuelvo true si la condición es true
     }
-    console.log (esMayorQue (10, 15)); //   Muestro en consola el valor false si la condición es false - se pasaron los valores 10 y 15 como parámetro -  (FALSE)
-    console.log (esMayorQue (4, 2)); //Muestro en consola el valor true si la condición es false - se pasaron los valores 4  y 2 como parámetro   -   (TRUE)
-    
+    console.log(esMayorQue(10, 15)); //   Muestro en consola el valor false si la condición es false - se pasaron los valores 10 y 15 como parámetro -  (FALSE)
+    console.log(esMayorQue(4, 2)); //Muestro en consola el valor true si la condición es false - se pasaron los valores 4  y 2 como parámetro   -   (TRUE)
+
     //PATRON DE RETORNO ANTICIPADO
-    function miFuncion (){
-        console.log ("Hola");
+    function miFuncion() {
+        console.log("Hola");
         return "Mundo"; //Devuelvo el valor "Mundo"  -  Cuando se ejecuta la sentencia return, la función deja de ejecutarse
-        console.log ("Adios"); //Esta línea no se ejecuta porque la función ya terminó de ejecutarse
+        console.log("Adios"); //Esta línea no se ejecuta porque la función ya terminó de ejecutarse
     }
-    console.log (miFuncion()); //Ejecuto la función miFuncion y muestro en consola el valor "Mundo" - se pasó el valor "Mundo" como parámetro
-    
+    console.log(miFuncion()); //Ejecuto la función miFuncion y muestro en consola el valor "Mundo" - se pasó el valor "Mundo" como parámetro
+
     //EJEMPLO DE PATRON DE RETORNO ANTICIPADO
-    function calcularRaizCuadrada(numero){
+    function calcularRaizCuadrada(numero) {
         if (numero < 0) { //Si el valor de la variable numero es menor que 0
             return "El número no puede ser negativo"; //Devuelvo el mensaje "El número no puede ser negativo" si la condición es true
         }
         return Math.sqrt(numero); //Devuelvo el valor de la raíz cuadrada del número si la condición es false
     }
-    
-    console.log (calcularRaizCuadrada(-9)); //Devuelve el mensaje "El número no puede ser negativo" - se pasó el valor -9 como parámetro
-    console.log (calcularRaizCuadrada(9)); //Devuelve el valor 3 - se pasó el valor 9 como parámetro
-    
-    
+
+    console.log(calcularRaizCuadrada(-9)); //Devuelve el mensaje "El número no puede ser negativo" - se pasó el valor -9 como parámetro
+    console.log(calcularRaizCuadrada(9)); //Devuelve el valor 3 - se pasó el valor 9 como parámetro
+
+
     // DECLARAR OBJETOS
-    
+
     var miObjeto = {}; //Declaro un objeto vacío
     var miObjeto = { //Declaro un objeto con propiedades
         nombre: "Juan", //Propiedad nombre con valor "Juan"
@@ -436,10 +436,10 @@
             provincia: "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
         }
     };
-    
+
     console.log(miObjeto.nombre); //Muestro en consola el valor "Juan" - se pasó el valor "Juan" como parámetro
     console.log(miObjeto.direccion.calle); //Muestro en consola el valor "Calle Falsa" - se pasó el valor "Calle Falsa" como parámetro
-    
+
     //corchetes
     var miObjetoDos = {}; //Declaro un objeto vacío
     var miObjetoDos = { //Declaro un objeto con propiedades
@@ -454,9 +454,9 @@
             "provincia": "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
         }
     };
-    
+
     console.log(miObjetoDos["primer apellido"]); //Muestro en consola el valor "Pérez" - se pasó el valor "Pérez" como parámetro
-    
+
     //Acceder a propiedades de un objeto usando variables
     var miObjetoTres = { //Declaro un objeto con propiedades
         nombre: "Juan", //Propiedad nombre con valor "Juan"
@@ -470,10 +470,10 @@
             provincia: "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
         }
     };
-    
+
     var propiedad = "nombre"; //Declaro una variable con el valor "nombre"
     console.log(miObjetoTres[propiedad]); //Muestro en consola el valor "Juan" - se pasó el valor "Juan" como parámetro	
-    
+
     //Actualizar propiedades de un objeto
     var miObjetoCuatro = { //Declaro un objeto con propiedades
         nombre: "Juan", //Propiedad nombre con valor "Juan"
@@ -488,43 +488,43 @@
             provincia: "Buenos Aires" //Propiedad provincia con valor "Buenos Aires"
         }
     };
-    
+
     miObjetoCuatro.nombre = "Agustín"; //Actualizo el valor de la propiedad nombre
     console.log(miObjetoCuatro.nombre); //Muestro en consola el valor "Agustín" - se pasó el valor "Agustín" como parámetro
     console.log(miObjetoCuatro.posesion); //Muestro en consola el array ["casa", "auto", "moto"] - se pasó el array ["casa", "auto", "moto"] como parámetro
-    
+
     //Agregar propiedades a un objeto 
     miObjetoCuatro.posesion.push("avión"); //Agrego un nuevo elemento al array posesion utilizando el método push
     console.log(miObjetoCuatro.posesion); //Muestro en consola el array ["casa", "auto", "moto", "avión"] - se pasó el array ["casa", "auto", "moto", "avión"] como parámetro
-    
+
     var curso = {
         nombre: "Curso de JavaScript",
         profesor: "Juan Pablo De la torre Valdez",
         temario: ["Introducción", "Variables", "Funciones", "Objetos", "Arrays", "Bucles", "Condicionales", "DOM", "Eventos", "JSON", "AJAX", "POO", "JQuery", "Frameworks"],
-    
+
     };
-    
-    console.log("Estas son las propiedades del objeto curso: "+ Object.keys(curso)); //Muestro en consola las propiedades del objeto curso con el método Object.keys que devuelve un array con las propiedades del objeto
-    curso.vistas= 4300; //Agrego una nueva propiedad al objeto curso
-    console.log("Estas son las nuevas propiedades del objeto curso: "+ Object.keys(curso)); //Muestro en consola las propiedades del objeto curso
-    console.log (curso.vistas); //Muestro en consola el valor 4300 - se pasó el valor 4300 como parámetro
-    
+
+    console.log("Estas son las propiedades del objeto curso: " + Object.keys(curso)); //Muestro en consola las propiedades del objeto curso con el método Object.keys que devuelve un array con las propiedades del objeto
+    curso.vistas = 4300; //Agrego una nueva propiedad al objeto curso
+    console.log("Estas son las nuevas propiedades del objeto curso: " + Object.keys(curso)); //Muestro en consola las propiedades del objeto curso
+    console.log(curso.vistas); //Muestro en consola el valor 4300 - se pasó el valor 4300 como parámetro
+
     //agrego la propiedad "alumnos" a mi objeto curso y le asigno los siguientes elementos: Agustín, Pedro, Juan, Lucas, Marta, María, Ana, Laura, Valeria, Valentina, Sofía, Camila, Valentina, Antonell
     curso.alumnos = ["Agustín", "Pedro", "Juan", "Lucas", "Marta", "María", "Ana", "Laura", "Valeria", "Valentina", "Sofía", "Camila", "Valentina", "Antonella"];
-    
+
     console.log("Estas son las propiedades del objeto curso: " + Object.keys(curso)); //Muestro en consola las propiedades del objeto curso
-    
-    
+
+
     //Eliminar una propiedad de un objeto
-    
+
     delete curso.vistas; //Elimino la propiedad alumnos del objeto curso	
-    console.log("Estas son las propiedades del objeto curso: "+ Object.keys(curso)); //object.keys devuelve un array con las propiedades del objeto
-    
+    console.log("Estas son las propiedades del objeto curso: " + Object.keys(curso)); //object.keys devuelve un array con las propiedades del objeto
+
     //OBJETOS PARA BÚSQUEDA - Función que busca elementos químicos por su símbolo utilizando un objeto y switch
-    
-    function buscaElemento (simbolo){
-    
-    x
+
+    function buscaElemento(simbolo) {
+
+        x
         var simbolosQuimicos = {
             "Ale": "Aluminio",
             "Arg": "Argón",
@@ -539,26 +539,26 @@
         };
         return simbolosQuimicos[simbolo];
     }
-    
+
     console.log("El elemento químico correspondiente a ese símbolo es: " + buscaElemento("Li")); //Muestro en consola el valor "Litio" - se pasó el valor "Li" como parámetro
     console.log("El elemento químico correspondiente a ese símbolo es: " + buscaElemento("Ca")); //Muestro en consola el valor "Calcio" - se pasó el valor "Ca" como parámetro
     console.log("El elemento químico correspondiente a ese símbolo es: " + buscaElemento("Fe")); //Muestro en consola el valor "Hierro" - se pasó el valor "Fe" como parámetro
-    
+
     //VERIFICAR PROPIEDADES DE UN OBJETO - Función que verifica si un objeto tiene una propiedad determinada
-    
-    function tienePropiedad (objeto, propiedad){ //Función que recibe dos parámetros: objeto y propiedad
-        if (objeto.hasOwnProperty(propiedad)){ //Si el objeto tiene la propiedad pasada como parámetro - método hasOwnProperty devuelve true si el objeto tiene la propiedad pasada como parámetro
+
+    function tienePropiedad(objeto, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
+        if (objeto.hasOwnProperty(propiedad)) { //Si el objeto tiene la propiedad pasada como parámetro - método hasOwnProperty devuelve true si el objeto tiene la propiedad pasada como parámetro
             return true;
         } else {
             return false;
-    
+
         }
     }
     console.log(tienePropiedad(curso, "nombre")); //Muestro en consola el valor true - se pasó el valor true como parámetro
-    
-    
+
+
     //Lo mismo pero sin usar if y else
-    
+
     var miBici = {
         color: "Rojo",
         marca: "Giant",
@@ -566,25 +566,25 @@
     };
     console.log(miBici.hasOwnProperty("marca")); //Muestro en consola el valor true - se pasó el valor true como parámetro
     console.log(miBici.hasOwnProperty("modelo")); //Muestro en consola el valor false - se pasó el valor false como parámetro
-    
-    
+
+
     //Función que verifica la existencia de una propiedad
-    
-    function verificarPropiedad (obj, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
+
+    function verificarPropiedad(obj, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
         if (obj.hasOwnProperty(propiedad)) {
             return "Propiedad: " + obj[propiedad]; //Si existe la propiedad Muestro en consola el valor de la misma
         } else {
             return "La propiedad no existe"; //Si no existe la propiedad Muestro en consola el mensaje "La propiedad no existe"
         }
     }
-    
-    console. log(verificarPropiedad(miBici, "color"));
-    
-    
+
+    console.log(verificarPropiedad(miBici, "color"));
+
+
     //---------------------------------------------------------------------------------------------------
-    
+
     //OBJETOS COMPLEJOS
-    
+
     var ordenesDePizza = [
         {
             tamaño: "Grande",
@@ -607,32 +607,32 @@
             coccion: 15,
             delivery: false,
         },
-    ];	
-    
+    ];
+
     console.log(ordenesDePizza[0].ingredientes); //Muestro en consola el array ["jamón", "cebolla", "queso"] - se pasó el array ["jamón", "cebolla", "queso"] como parámetro
-    
+
     //Función que verifica la existencia de una propiedad
-    function consultaDePizzas (objeto, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
+    function consultaDePizzas(objeto, propiedad) { //Función que recibe dos parámetros: objeto y propiedad
         if (objeto.hasOwnProperty(propiedad)) {
             return "Propiedad: " + objeto[propiedad]; //Si existe la propiedad Muestro en consola el valor de la misma
         } else {
             return "La propiedad no existe"; //Si no existe la propiedad Muestro en consola el mensaje "La propiedad no existe"
         }
     }
-    
+
     console.log(consultaDePizzas(ordenesDePizza[0], "ingredientes")); //Muestro en consola el array ["jamón", "cebolla", "queso"] - se pasó el array ["jamón", "cebolla", "queso"] como parámetro
     console.log(consultaDePizzas(ordenesDePizza[1], "masa")); //Muestro en consola el array ["jamón", "cebolla", "queso", "aceitunas"] - se pasó el array ["jamón", "cebolla", "queso", "aceitunas"] como parámetro
-    
-    
-    
+
+
+
     //Objetos anidados
-    
+
     var miReceta = { //Objeto 
         "descripcion": "Torta de chocolate",
         "porciones": 8,
         "costo": 22.45,
-        "ingredientes":{
-            "masa":{ //Objeto anidado - Objeto dentro de otro objeto
+        "ingredientes": {
+            "masa": { //Objeto anidado - Objeto dentro de otro objeto
                 "harina": "2 tazas",
                 "azucar": "100 gramos",
                 "huevo": 2,
@@ -650,41 +650,41 @@
             "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos",
         ],
     };
-    
+
     console.log(miReceta.ingredientes.masa); //Muestro en consola el objeto anidado "masa"
     console.log(miReceta.costo); //Muestro en consola el valor 22.45
-    console.log("Preparación de "  + miReceta.descripcion + ": " +  miReceta.preparacion); //Muestro en consola el array ["Mezclar la harina, el azúcar, la levadura y la manteca", "Agregar los huevos y el chocolate rallado", "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos"]
-    console.log ("Segundo paso: " + miReceta.preparacion[2]); //Muestro en consola el valor "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos"
-    
+    console.log("Preparación de " + miReceta.descripcion + ": " + miReceta.preparacion); //Muestro en consola el array ["Mezclar la harina, el azúcar, la levadura y la manteca", "Agregar los huevos y el chocolate rallado", "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos"]
+    console.log("Segundo paso: " + miReceta.preparacion[2]); //Muestro en consola el valor "Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos"
+
     //muestro en consola los ingredientes de la masa con object.keys
     console.log("Ingredientes de la masa: " + Object.keys(miReceta.ingredientes.masa));
     //muestro en consola el objeto preparacion y los valores de cada paso con object.values 
     console.log("Preparación: " + Object.values(miReceta.preparacion)); // Object.values devuelve un array con los valores de cada propiedad del objeto - en este caso devuelve un array con los valores de cada paso de la preparación
-    
-    
-    
+
+
+
     //WHILE - BUCLE MIENTRAS
-    
+
     var contador = 0; //Variable contador
     while (contador <= 10) { //Mientras el contador sea menor a 10
         console.log("Contador = " + contador); //Muestro en consola el valor del contador
         contador++; //Incremento el contador en 1
     }
-    
-    
+
+
     //WHILE - BUCLE MIENTRAS - EJEMPLO 2 - Agregar los números entre 0 y 9 a un arreglo.
-    
+
     var contador = 0; //Variable contador
     var arreglo = []; //Variable arreglo
     while (contador <= 9) { //Mientras el contador sea menor a 9
         arreglo.push(contador); //Agrego el valor del contador al arreglo
         contador++; //Incremento el contador en 1
-    }	
+    }
     console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
-    
-    
+
+
     //WHILE - BUCLE MIENTRAS - EJEMPLO 3 - REMOVER ELEMENTOS DE UN ARRAY MIENTRAS SE CUMPLA UNA CONDICIÓN.
-    
+
     var arreglo = [2, 5, 78, 234, 10, 87, 9, 6, 13]; //Variable arreglo
     var contador = 0; //Variable contador
     console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
@@ -692,27 +692,27 @@
         arreglo.pop(); //Remuevo el último elemento del arreglo
         contador++; //Incremento el contador en 1
     }
-    
-    
+
+
     console.log("Cantidad de elementos removidos: " + contador); //Muestro en consola la cantidad de elementos removidos del arreglo (4)
     console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
-    
-    
+
+
     //---------------------------------------------------------------------------------------
-    
+
     // CICLO FOR - BUCLE PARA 
-    
+
     //EJEMPLO 1 - Agregar los números entre 0 y 9 a un arreglo.
-    
+
     var arreglo = []; //Variable arreglo
     for (var i = 0; i <= 9; i++) { //Variable i = 0; mientras i sea menor o igual a 9; incrementar i en 1
         arreglo.push(i); //Agrego el valor de i al arreglo
     }
     console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
-    
-    
+
+
     //EJEMPLO 2 - REMOVER ELEMENTOS DE UN ARRAY MIENTRAS SE CUMPLA UNA CONDICIÓN.
-    
+
     var arreglo = [2, 5, 78, 234, 10, 87, 9, 6, 13]; //Variable arreglo
     var contador = 0; //Variable contador
     console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
@@ -722,11 +722,99 @@
     }
     console.log("Cantidad de elementos removidos: " + contador); //Muestro en consola la cantidad de elementos removidos del arreglo (4)
     console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
-    
-    
-    
+
+
+    //EJEMPLO 3 - REMOVER ELEMENTOS DE UN ARRAY MIENTRAS SE CUMPLA UNA CONDICIÓN.
+
+    var arreglo = [2, 5, 78, 234, 10, 87, 9, 6, 13]; //Variable arreglo
+    var contador = 0; //Variable contador
+    console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
+
+
+    //Crear un array con numeros inpares  entre 1 y 30 usando for 
+    var arreglo = [];
+    for (var i = 1; i <= 30; i = i + 2) {
+        arreglo.push(i);
+    }
+    console.log(arreglo);
+
+    // Crear un array con numeros pares entre 2 y 26 usando for
+    var arreglo = [];
+    for (var i = 2; i <= 26; i = i + 2) {
+        arreglo.push(i);
+    }
+
+    console.log(arreglo);
+
+
+    //CICLOS FOR - CONTAR HACIA ATRÁS
+
+
+    for (i = 15; i >= 10; i--) {//Variable i = 15; mientras i sea mayor o igual a 0; decrementar i en 1
+        //mostrar en consola el valor de i con cada iteración
+        console.log("Valor de i: " + (i));
+    }
+
+
+    //CICLOS FOR - CONTAR HACIA ATRÁS - EJEMPLO 2
+
+    var arreglo = [2, 5, 78, 234, 10, 87, 9, 6, 13, 89, 7, 65, 2, 12, 21, 1000]; //Variable arreglo
+    var contador = 0; //Variable contador
+    console.log(arreglo); //Muestro en consola el arreglo 
+    for (var i = arreglo.length - 1; i >= 5; i--) { //Variable i = largo del arreglo - 1; mientras i sea mayor o igual a 5; decrementar i en 1
+        arreglo.pop(); //Remuevo el último elemento del arreglo
+        contador++; //Incremento el contador en 1 -   
+    }
+    console.log("Cantidad de elementos removidos: " + contador); //Muestro en consola la cantidad de elementos removidos del arreglo ()
+    console.log((i + 1) + " Elementos restantes: " + arreglo); // Muestro en consola el valor de i + 1 porque el indice para el primer elemento es 0, por lo tanto el indice del ultimo elemento es el largo del arreglo - 1. 
+
+
+    //ITERAR SOBRE UN ARRAY UTILIZANDO UN CICLO FOR - sumar los valores de un array
+
+    var arreglo = [2, 5, 3, 10, 5, 1, 4]; //Variable arreglo
+    var subtotal = 0; //Variable subtotal
+    for (var i = 0; i < arreglo.length; i++) { //Variable i = 0; mientras i sea menor al largo del arreglo; incrementar i en 1
+        console.log('Iteración:  ' + i + ' - Valor del elemento: ' + arreglo[i] + ' - Valor de la variable subtotal: ' + subtotal + ' - Valor del subtotal: ' + (subtotal + arreglo[i]) + ''); //Muestro en consola el valor de la variable i, el valor del elemento del arreglo en la posición i y el valor de la variable subtotal
+        subtotal += arreglo[i]; //Sumo el valor de la variable subtotal con el valor del elemento del arreglo en la posición i - (+= es una abreviación de subtotal = subtotal + ...)
+    }
+    var total = subtotal; //Variable total 
+    console.log("La suma de los elementos del arreglo es: " + total); //Muestro en consola el valor de la variable suma
+
+
+    //CONVERTIR LOS STRINGS CON NOMBRE DE LENGUAJES DE PROGRAMACIÓN CONTENIDOS EN UN ARRAY A MAYÚSCULAS
+
+    var lenguajes = ['php', 'javascript', 'java', 'c#', 'c++', 'c', 'python', 'ruby', 'swift', 'kotlin', 'go']; //Variable lenguajes
+    console.log(("Los lenguajes de programación son: " + (lenguajes))); //Muestro en consola el arreglo con los nombres de los lenguajes de programación
+    for (var i = 0; i < lenguajes.length; i++) { //Variable i = 0; mientras i sea menor al largo del arreglo; incrementar i en 1
+        lenguajes[i] = lenguajes[i].toUpperCase(); //Convierto el string en mayúsculas
+    }
+
+    console.log(("Los lenguajes en mayúscula se ven así: " + (lenguajes))); //Muestro en consola el arreglo con los nombres de los lenguajes de programación en mayúsculas
+
+
+// EJERCICIO 1 - CONTAR LOS NÚMEROS PARES DE UN ARRAY y AGREGAR LOS NÚMEROS PARES A UN NUEVO ARRAY
    
+    function contarNumerosPares(arreglo) {
+        var pares = []; //Variable pares
+        var contador = 0;   //Variable contador
+        for (var i = 0; i < arreglo.length; i++) {  //Variable i = 0; mientras i sea menor al largo del arreglo; incrementar i en 1
+            if (arreglo[i] % 2 == 0) {
+                pares.push(arreglo[i]); //Agrego el elemento del arreglo en la posición i al array pares
+                contador++; //Incremento el contador en 1
+            }
+        }
+        return [contador, pares];
+    }
+    console.log (arreglo = [2, 5, 3, 10, 5, 1, 4]); //Muestro en consola el arreglo con los nombres de los lenguajes de programación
+    var resultado = contarNumerosPares(arreglo); //Variable resultado es igual a la función contarNumerosPares
+    console.log("Cantidad de números pares: " + resultado[0]); //Muestro en consola la cantidad de números pares
+    console.log("Números pares: " + resultado[1]);  //Muestro en consola los números pares
+ 
+
     
-    
-    
-    </script>
+
+
+
+
+
+</script>
