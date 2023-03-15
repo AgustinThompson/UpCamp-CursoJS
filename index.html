@@ -627,12 +627,12 @@ console.log(consultaDePizzas(ordenesDePizza[1], "masa")); //Muestro en consola e
 
 //Objetos anidados
 
-var miReceta = { //Objeto
+var miReceta = { //Objeto 
 	"descripcion": "Torta de chocolate",
 	"porciones": 8,
 	"costo": 22.45,
 	"ingredientes":{
-		"masa":{ //Objeto anidado
+		"masa":{ //Objeto anidado - Objeto dentro de otro objeto
 			"harina": "2 tazas",
 			"azucar": "100 gramos",
 			"huevo": 2,
@@ -644,7 +644,7 @@ var miReceta = { //Objeto
 			"crema": "1 taza",
 		},
 	},
-	"preparacion": [ //Array
+	"preparacion": [ //Array - propiedad del objeto
 		"Mezclar la harina, el azúcar, la levadura y la manteca",
 		"Agregar los huevos y el chocolate rallado",
 		"Verter la mezcla en un molde y hornear a 180 grados durante 30 minutos",
@@ -663,12 +663,76 @@ console.log("Preparación: " + Object.values(miReceta.preparacion)); // Object.v
 
 
 
+//WHILE - BUCLE MIENTRAS
+
+var contador = 0; //Variable contador
+while (contador <= 10) { //Mientras el contador sea menor a 10
+	console.log("Contador = " + contador); //Muestro en consola el valor del contador
+	contador++; //Incremento el contador en 1
+}
 
 
+//WHILE - BUCLE MIENTRAS - EJEMPLO 2 - Agregar los números entre 0 y 9 a un arreglo.
+
+var contador = 0; //Variable contador
+var arreglo = []; //Variable arreglo
+while (contador <= 9) { //Mientras el contador sea menor a 9
+	arreglo.push(contador); //Agrego el valor del contador al arreglo
+	contador++; //Incremento el contador en 1
+}	
+console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
 
 
+//WHILE - BUCLE MIENTRAS - EJEMPLO 3 - REMOVER ELEMENTOS DE UN ARRAY MIENTRAS SE CUMPLA UNA CONDICIÓN.
+
+var arreglo = [2, 5, 78, 234, 10, 87, 9, 6, 13]; //Variable arreglo
+var contador = 0; //Variable contador
+console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
+while (arreglo.length > 5) { //Mientras el largo del arreglo sea mayor a 5
+	arreglo.pop(); //Remuevo el último elemento del arreglo
+	contador++; //Incremento el contador en 1
+}
 
 
+console.log("Cantidad de elementos removidos: " + contador); //Muestro en consola la cantidad de elementos removidos del arreglo (4)
+console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
+
+
+//---------------------------------------------------------------------------------------
+
+// CICLO FOR - BUCLE PARA 
+
+//EJEMPLO 1 - Agregar los números entre 0 y 9 a un arreglo.
+
+var arreglo = []; //Variable arreglo
+for (var i = 0; i <= 9; i++) { //Variable i = 0; mientras i sea menor o igual a 9; incrementar i en 1
+	arreglo.push(i); //Agrego el valor de i al arreglo
+}
+console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
+
+
+//EJEMPLO 2 - REMOVER ELEMENTOS DE UN ARRAY MIENTRAS SE CUMPLA UNA CONDICIÓN.
+
+var arreglo = [2, 5, 78, 234, 10, 87, 9, 6, 13]; //Variable arreglo
+var contador = 0; //Variable contador
+console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
+for (var i = arreglo.length; i > 5; i--) { //Variable i = largo del arreglo; mientras i sea mayor a 5; decrementar i en 1
+	arreglo.pop(); //Remuevo el último elemento del arreglo
+	contador++; //Incremento el contador en 1
+}
+console.log("Cantidad de elementos removidos: " + contador); //Muestro en consola la cantidad de elementos removidos del arreglo (4)
+console.log(arreglo); //Muestro en consola el arreglo con los valores del 0 al 9
+
+// EJEMPLO 3 - AGREGAR ELEMENTOS A UN ARRAY USANDO FOR
+
+var arreglo = []; //Variable arreglo
+var e = 0;
+for (var i = 0; i <20; i+2) { //Variable i = 0; mientras i sea menor a 20; incrementar i en 2
+	arreglo.push(i); //Agrego el valor de i al arreglo
+	var e = i;
+}
+console.log(arreglo); 
+console.log('e = ' + e);
 
 
 
