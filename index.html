@@ -807,10 +807,127 @@
     }
     console.log (arreglo = [2, 5, 3, 10, 5, 1, 4]); //Muestro en consola el arreglo con los nombres de los lenguajes de programación
     var resultado = contarNumerosPares(arreglo); //Variable resultado es igual a la función contarNumerosPares
-    console.log("Cantidad de números pares: " + resultado[0]); //Muestro en consola la cantidad de números pares
-    console.log("Números pares: " + resultado[1]);  //Muestro en consola los números pares del arreglo original en un nuevo arreglo
+    console.log("Cantidad de números pares: " + resultado[0] + " - " + "Estos son: " + resultado[1]); //Muestro en consola la cantidad de números pares y los números pares
 
-    
+    // CICLOS FOR ANIDADOS
+
+    var MiArregloPrincipal =[[1, 2, 3], [4, 5, 6], [7, 8, 9]]; //Variable miArregloPrincipal
+    for (var i = 0; i<MiArregloPrincipal.length; i++){ //recorro el arreglo principal y muestro en consola cada elemento 
+        var miArregloAnidado = MiArregloPrincipal[i]; //variable miArregloAnidado es igual al elemento del arreglo principal en la posición i
+        for (var j = 0; j<miArregloAnidado.length; j++){  // recorro cada arreglo anidado y muestro en consola cada elemento
+            console.log(miArregloAnidado[j]);
+        }
+    }
+
+    // CICLOS DO WHILE
+/* La diferencia entre while y do while es que, usando do while el ciclo o lo que se sentencie con do, se ejecutará  una vez antes de validar la condición dada en el while */
+
+/* do {
+    Código a ejecutar
+} while (condición); */
+
+//EJEMPLO 1
+
+var i = 20; //Variable i
+do {
+    console.log(i); //Muestro en consola el valor de la variable i
+    i++; //Incremento el valor de la variable i en 1
+} while (i < 30); //Mientras la variable i sea menor a 10
+
+
+
+//arreglo con lista de contactos
+
+var contactos = [{
+    nombre: 'Juan',
+    telefono: '123456789'
+}, {
+    nombre: 'Pedro',
+    telefono: '987654321'
+}, {
+    nombre: 'Ana',
+    telefono: '123987456'
+}, {
+    nombre: 'Laura',
+    telefono: '456789123'
+}, {
+    nombre: 'Pablo',
+    telefono: '789456123'
+}];
+
+//función para buscar contactos que devuelve el nombre y el telefono del contacto buscado
+
+// Definición de la lista de contactos
+var contactos = [
+  {
+    nombre: 'Juan',
+    apellido: 'Pérez',
+    telefono: '123456789',
+    gustos: ['cine', 'música', 'deporte']
+  },
+  {
+    nombre: 'María',
+    apellido: 'Gómez',
+    telefono: '987654321',
+    gustos: ['leer', 'viajar', 'cocinar']
+  },
+  {
+    nombre: 'Pedro',
+    apellido: 'López',
+    telefono: '456123789',
+    gustos: ['jugar videojuegos', 'hacer deporte']
+  }
+];
+
+
+// Definición de la función que busca un contacto y muestra una propiedad específica
+function buscarContacto(propiedad, nombre) {
+  for (var i = 0; i < contactos.length; i++) {
+    if (contactos[i].nombre === nombre && contactos[i][propiedad]) { // si el nombre del contacto coincide con el nombre buscado y la propiedad existe
+        console.log(nombre + ': ' + propiedad + ': ' + contactos[i][propiedad]); // muestra el nombre del contacto y la propiedad buscada
+      return;
+    }
+  }
+  console.log('No se encontró el contacto o la propiedad especificada no existe.'); // si no se encontró el contacto o la propiedad no existe
+}
+
+// Ejemplo de uso de la función buscarContacto
+buscarContacto('apellido', 'Juan'); // muestra "Juan: apellido: Pérez" en consola
+buscarContacto('telefono', 'María'); // muestra "María: telefono: 987654321" en consola
+buscarContacto('gustos', 'Pedro');  // muestra "Pedro: gustos: jugar videojuegos,hacer deporte" en consola
+buscarContacto( 'gustos', 'María'); // muestra "María: gustos: leer,viajar,cocinar" en consola
+buscarContacto('edad', 'Pedro'); // muestra "No se encontró el contacto o la propiedad especificada no existe." en consola
+
+
+//NUMEROS ALEATORIOS ENTRE 0 Y 1 - Math.random()
+
+// Ejemplo 1
+function generarFraccionAleatoria() {
+    return Math.random(); //Devuelve un número aleatorio entre 0 y 1
+}
+console.log(generarFraccionAleatoria()); //Muestro en consola el número aleatorio generado
+console.log(generarFraccionAleatoria()); //Muestro en consola el número aleatorio generado
+console.log(generarFraccionAleatoria()); //Muestro en consola el número aleatorio generado
+
+// Ejemplo 2
+var miNumeroAleatorio = Math.random(); //Variable miNumeroAleatorio es igual a Math.random
+console.log(miNumeroAleatorio); //Muestro en consola el número aleatorio generado
+
+
+// NUMEROS ALEATORIOS ENTEROS ENTRE 0 Y 19 - Math.floor(Math.random() * 20)
+
+function generateRandomNumber() {
+  var randomNumber = Math.floor(Math.random() * 20); //Variable randomNumber es igual a Math.floor(Math.random() * 20)
+  console.log(randomNumber);
+}
+
+generateRandomNumber(); // Muestra en consola un número aleatorio entre 0 y 19
+generateRandomNumber(); 
+generateRandomNumber(); 
+
+
+
+
 
 
 
