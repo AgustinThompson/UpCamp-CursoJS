@@ -925,12 +925,77 @@ generateRandomNumber(); // Muestra en consola un número aleatorio entre 0 y 19
 generateRandomNumber(); 
 generateRandomNumber(); 
 
+// FUNCIÓN QUE GENERA NÚMEROS ALEATORIOS ENTEROS Y LOS GUARDA EN UN ARRAY - La cantidad de números aleatorios a generar se pasa como parámetro y el limite máximo de los números aleatorios se pasa como parámetro
+
+function generateRandomNumbers(maxNumber, quantity) { 
+  var randomNumbers = []; //Variable randomNumbers es igual a un array vacío
+  for (var i = 0; i < quantity; i++) {  //quantity es la cantidad de números aleatorios a generar
+    var randomNumber = Math.floor(Math.random() * (maxNumber + 1)); //maxNumber es el límite máximo de los números aleatorios
+    randomNumbers.push(randomNumber); //Agrego el número aleatorio generado al array randomNumbers
+  }
+  console.log(randomNumbers);
+}
+
+console.log(generateRandomNumbers(50, 10)); // Genera un array con 5 números aleatorios entre 0 y 50, y lo muestra en la consola
+
+
+// FUNCIÓN QUE GENERA NÚMEROS ALEATORIOS ENTEROS  (no repetidos) Y LOS GUARDA EN UN ARRAY - 
+//La cantidad de números aleatorios a generar se pasa como parámetro y el limite máximo de los números aleatorios se pasa como parámetro
+
+function generateRandomNumbers(maxNumber, quantity) {
+  var randomNumbers = [];
+  while(randomNumbers.length < quantity) {
+    var randomNumber = Math.floor(Math.random() * (maxNumber + 1));
+    if(!randomNumbers.includes(randomNumber)) { //Si el array randomNumbers no incluye el número aleatorio generado
+      randomNumbers.push(randomNumber); //Agrego el número aleatorio generado al array randomNumbers
+    }
+  }
+  console.log(randomNumbers);
+}
+
+generateRandomNumbers(9, 10); // Genera un array con 10 números aleatorios únicos entre 0 y 9, y lo muestra en la consola
 
 
 
+// misma función que la anterior pero estableciendo además el límite inferior de los números aleatorios
+
+function generateUniqueRandomNumbers(lowerLimit, upperLimit, quantity) {
+  if (upperLimit - lowerLimit + 1 < quantity) {
+    console.log("No se pueden generar la cantidad de números aleatorios solicitados");
+    return;
+  }
+
+  var randomNumbers = [];
+  while (randomNumbers.length < quantity) {
+    var randomNumber = Math.floor(Math.random() * (upperLimit - lowerLimit + 1)) + lowerLimit; 
+    if (!randomNumbers.includes(randomNumber)) {
+      randomNumbers.push(randomNumber);
+    }
+  }
+
+  console.log(`${quantity} números aleatorios únicos generados entre ${lowerLimit} y ${upperLimit}:`, randomNumbers); // Uso de template literals para mostrar el mensaje en consola  - https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings 
+};
 
 
+generateUniqueRandomNumbers(10, 50, 5); // Genera un array con 5 números aleatorios únicos entre 10 y 50, y lo muestra en la consola
 
 
+//FUNCION parseInt() - Convierte un string en un número entero
+
+var numero = '123';
+console.log(typeof numero); // Muestra en consola "string" - typeof devuelve el tipo de dato de la variable
+console.log(typeof parseInt(numero)); // Muestra en consola "number" - parseInt convierte el string en un número entero - typeof devuelve el tipo de dato de la variable
+
+//FUNCION parseFloat() - Convierte un string en un número decimal
+
+var numero = '123.456';
+console.log(typeof numero); // Muestra en consola "string" - typeof devuelve el tipo de dato de la variable
+console.log(typeof parseFloat(numero)); // Muestra en consola "number" - parseFloat convierte el string en un número decimal - typeof devuelve el tipo de dato de la variable
+
+// OPERADOR CONDICIONAL TERNARIO
+
+var edad = 18;
+var mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad"; // Si la condición es verdadera, asigna el primer valor a la variable mensaje, si es falsa, asigna el segundo valor a la variable mensaje
+console.log(mensaje);
 
 </script>
