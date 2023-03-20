@@ -150,6 +150,19 @@ userCinco.greetAndHobby(); */
 
 Person.olderThan([userUno, userDos, userTres, userCuatro, userCinco], 30);
 
+// Relacion entre objetos - herencia    -   se crea una nueva propiedad al objeto userUno que hace referencia al objeto userDos
+userUno.parent = userDos; // se agrega una nueva propiedad al objeto userUno
+
+console.log(userUno.parent.name); // se accede a la propiedad parent del objeto userUno y se imprime el nombre del objeto padre (Pedro)
+
+
+console.log(userUno); 
+console.log(userDos);
+
+
+
+
+
 
 /* --------------------------------------------------------------------------*/
 
